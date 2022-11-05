@@ -27,12 +27,12 @@ export default function TestimonialCard({ image, body, by, position }) {
       </span>
       <span className="grid ">
         <FontAwesomeIcon
-          className="text-background2 -mt-[75px] ml-[20px] text-2xl"
+          className="text-background2 -mt-[75px] ml-[20px] w-[30px] h-[25px]"
           icon={faQuoteLeft}
         />
         <span className="ml-auto">
           <FontAwesomeIcon
-            className="absolute text-background2 text-4xl -ml-[10px] -mt-[20px] -z-1 "
+            className="absolute text-background2 w-[31.5px] h-[36px] -ml-[10px] -mt-[20px] -z-1 "
             icon={faQuoteRight}
           />
         </span>
