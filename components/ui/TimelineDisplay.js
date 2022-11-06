@@ -8,7 +8,7 @@ export default function TimelineDisplay({ timelines, heading }) {
       <div className="grid">
         {timelines.map((timeline, index, row) => (
           <TimelineElement
-            key={timeline}
+            key={Math.random()}
             duration={timeline.duration}
             place={timeline.place}
             position={timeline.position}

@@ -8,7 +8,7 @@ export default function TimelineElement({
   return (
     <div className={"border-l border-background2  p-4 m-4 grid my-auto "+' '+className}>
       {/* date and area start */}
-      <div className="grid grid-flow-col m-auto gap-1 m-auto absolute -ml-10 -mt-3 ">
+      <div className="grid grid-flow-col m-auto gap-2 m-auto absolute -ml-10 -mt-3 ">
         <div className="rounded-full px-3 py-px  m-auto border-2 inline-flex border-accentColor bg-background1 text-[13px] font-semibold opacity-90">
           {duration}
         </div>

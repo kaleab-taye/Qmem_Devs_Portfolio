@@ -1,5 +1,6 @@
 import BodyLayout from '../components/ui/BodyLayout';
 import PageHeading from '../components/ui/PageHeading';
+import ProgressDisplay from '../components/ui/ProgressDisplay';
 import TimelineDisplay from '../components/ui/TimelineDisplay';
 
 export default function resume() {
@@ -10,8 +11,8 @@ export default function resume() {
       {/* current page desc section end*/}
 
       <div className="max-w-maxContentWid mx-10 2xl:mx-auto my-16 ">
-      {/* timeline section start */}
-        <div className="grid grid-flow-row sm:grid-flow-col">
+        {/* timeline section start */}
+        <div className="grid grid-flow-row sm:grid-flow-col mb-10">
           <TimelineDisplay
             heading="Experience"
             timelines={[
@@ -52,8 +53,25 @@ export default function resume() {
             ]}
           />
         </div>
-              {/* timeline section end */}
-
+        {/* timeline section end */}
+        {/* skills section start */}
+        <div className="grid grid-flow-col gap-8">
+          <ProgressDisplay
+            heading="Coding Proficiency"
+            items={[
+              { name: 'React', amount: '70%' },
+              { name: 'NEXT Js', amount: '80%' },
+            ]}
+          />
+          <ProgressDisplay
+            heading="Coding Proficiency"
+            items={[
+              { name: 'HTML/CSS', amount: '100%' },
+              { name: 'Javascript', amount: '6%' },
+            ]}
+          />
+        </div>
+        {/* skills section end */}
       </div>
     </BodyLayout>
   );

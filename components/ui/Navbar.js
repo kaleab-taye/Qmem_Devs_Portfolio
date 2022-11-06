@@ -71,24 +71,36 @@ export default function Navbar() {
           onClick={() => setDrawerState(false)}
           onKeyDown={() => setDrawerState(false)}
         >
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Home
-          </div>
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Resume
-          </div>
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Portfolio
-          </div>
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Blog
-          </div>
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Contact
-          </div>
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Hire Us
-          </div>
+        <Link href="/">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Home
+        </div>
+      </Link>
+      <Link href="/resume">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Resume
+        </div>
+      </Link>
+      <Link href="/portfolio">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Portfolio
+        </div>
+      </Link>
+      <Link href="/blog">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Blog
+        </div>
+      </Link>
+      <Link href="/contact">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Contact
+        </div>
+      </Link>
+      <Link href="/">
+        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          Hire Us
+        </div>
+      </Link>
         </Box>
       </Drawer>
     </div>
