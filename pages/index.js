@@ -16,7 +16,7 @@ import OverviewCard from '../components/ui/OverviewCard';
 
 export default function Home() {
   return (
-    <BodyLayout>
+    <BodyLayout page="home">
       <div className="max-w-maxContentWid   mx-10 2xl:mx-auto  my-auto">
         <Head>
           <title>Create Next App</title>
@@ -26,12 +26,21 @@ export default function Home() {
         <div className="m-auto max-w-maxContentWid">
           {/* landing section start */}
           <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-10">
-            <div className="m-auto max-w-[350px]  rounded-full shadow-[0px_0px_25px_textColor1]  shadow-textColor1 inline-flex border border-background2 border-8 bg-gray-500">
-              <Image
-                className="w-96 p-5 overflow-visible"
-                alt="Hero image"
-                src={heroImage}
-              />
+            <div className="grid m-auto max-w-[350px]  rounded-full inline-flex">
+              <div className="relative grid m-auto box-content">
+                {/* changing shadow design start */}
+                <div className="s1 rounded-full shadow-[-3px_-3px_10px_2px_textColor1] shadow-textColor1    absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
+                <div className="s2 rounded-full shadow-[3px_-3px_10px_2px_textColor1] shadow-accentColor absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
+                {/* changing shadow design end */}
+
+                <div className="w-fit grid m-auto h-fit rounded-full border border-background2 border-8  bg-gray-500">
+                  <Image
+                    className="relative m-auto object-cover w-96 p-5 overflow-visible"
+                    alt="Hero image"
+                    src={heroImage}
+                  />
+                </div>
+              </div>
             </div>
             <div className="my-auto grid grid-flow-row gap-5">
               <div className="grid gap-1">

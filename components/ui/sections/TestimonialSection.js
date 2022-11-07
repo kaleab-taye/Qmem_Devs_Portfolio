@@ -9,11 +9,15 @@ import usePagination from '@mui/material/usePagination';
 import { Box } from '@mui/system';
 import { useEffect, useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
+import { autoPlay, virtualize, bindKeyboard } from 'react-swipeable-views-utils';
+
 import { duration, useTheme } from '@mui/material/styles';
 import CustomizedPagination from '../CustomizedPagination';
 import PartialUnderline from '../PartialUnderline';
 import TestimonialCard from '../TestimonialCard';
 
+
+const EnhancedSwipeableViews = bindKeyboard(SwipeableViews);
 export default function TestimonialSection() {
   const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -37,21 +41,19 @@ export default function TestimonialSection() {
   const [pageNumber, setPageNumber] = useState(0);
   const theme = useTheme();
 
-  useEffect(() => {
-    console.log(pageNumber);
-  }, [pageNumber]);
   return (
     <div className="grid grid-flow-row gap-8 ">
       <div>
         <PartialUnderline text="Testimonials" />
       </div>
       <div>
-        <SwipeableViews
+        <EnhancedSwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={pageNumber}
           onChangeIndex={(index) => {
             setPageNumber(index);
           }}
+         
         >
           <TabPanel
             value={pageNumber}
@@ -70,7 +72,7 @@ export default function TestimonialSection() {
               <TestimonialCard by="Abel Tesema" />{' '}
             </span>
           </TabPanel>
-        </SwipeableViews>
+        </EnhancedSwipeableViews>
         <Tabs
           value={pageNumber}
           aria-label=""

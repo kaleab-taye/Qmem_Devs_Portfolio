@@ -7,20 +7,30 @@ import Link from 'next/link';
 import { useState } from 'react';
 import logoImage from '../../public/Logo.png';
 
-export default function Navbar() {
+export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
-
   return (
     <div className=" grid grid-flow-col lg:mx-10 mx-5 py-2 lg:py-6 ">
       <div className=" text-textColor1 mr-auto my-auto text-xl grid grid-flow-col my-auto">
-        <Image className="w-14 rounded-full" src={logoImage} alt="logo" />
-        <div className="my-auto ml-2 font-medium">
-          <span className="font-bold">Qmem</span> Developers
+      <Link href='/'>
+      <Image className="w-14 rounded-full" src={logoImage} alt="logo" />
+      </Link>  
+        <div className="my-auto ml-2 font-medium  ">
+          <Link href='/'>
+          <span>
+            <span className="font-bold drop-shadow-xl drop-shadow-accentColor ">
+              Qmem
+            </span>{' '}
+            Developers
+          </span>
+          </Link>
         </div>
       </div>{' '}
       <div className="text-sm hidden lg:grid grid-flow-col ml-auto gap-12 my-auto text-textColor3 ">
         <Link href="/">
-          <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+          <div
+            className={`transition ease-in-out delay-75 hover:opacity-100 opacity-60 py-3 px-2 cursor-pointer `}
+          >
             Home
           </div>
         </Link>
@@ -71,36 +81,36 @@ export default function Navbar() {
           onClick={() => setDrawerState(false)}
           onKeyDown={() => setDrawerState(false)}
         >
-        <Link href="/">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Home
-        </div>
-      </Link>
-      <Link href="/resume">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Resume
-        </div>
-      </Link>
-      <Link href="/portfolio">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Portfolio
-        </div>
-      </Link>
-      <Link href="/blog">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Blog
-        </div>
-      </Link>
-      <Link href="/contact">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Contact
-        </div>
-      </Link>
-      <Link href="/">
-        <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-          Hire Us
-        </div>
-      </Link>
+          <Link href="/">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Home
+            </div>
+          </Link>
+          <Link href="/resume">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Resume
+            </div>
+          </Link>
+          <Link href="/portfolio">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Portfolio
+            </div>
+          </Link>
+          <Link href="/blog">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Blog
+            </div>
+          </Link>
+          <Link href="/contact">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Contact
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
+              Hire Us
+            </div>
+          </Link>
         </Box>
       </Drawer>
     </div>

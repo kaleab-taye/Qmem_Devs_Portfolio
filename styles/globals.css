@@ -39,7 +39,59 @@
 }
 /* changing animation ends */
 
-html,
+.s1{opacity: 0;
+  animation: sty1 15s infinite;}
+  .s2{opacity: 0;
+    animation: sty2 15s infinite;}
+    @keyframes sty1{
+
+      /* 0%{opacity: 0;}
+      10%{opacity: 0.2;}
+      20%{opacity: 0.4;}
+      30%{opacity: 0.6;}
+      40%{opacity: 0.8;}
+      50%{opacity: 1;}
+      60%{opacity: 0.8;}
+      70%{opacity: 0.6;}
+      80%{opacity: 0.4;}
+      90%{opacity: 0.2;}
+      100%{opacity: 0;} */
+
+
+      /* 0%{opacity: 0.2;}
+      10%{opacity: 0.25;}
+      15%{opacity: 0.75;}
+      25%{opacity: 1;}
+      50%{opacity: 0.75;} */
+
+      0%{opacity: 0.2;}
+      50%{opacity: 0.8;}
+      100%{opacity: 0.2;}
+
+    }@keyframes sty2{
+      /* 0%{opacity: 1;}
+      10%{opacity: 0.8;}
+      20%{opacity: 0.6;}
+      30%{opacity: 0.4;}
+      40%{opacity: 0.2;}
+      50%{opacity: 0;}
+      60%{opacity: 0.2;}
+      70%{opacity: 0.4;}
+      80%{opacity: 0.6;}
+      90%{opacity: 0.8;}
+      100%{opacity: 1;} */
+
+      /* 50%{opacity: 0.2;}
+      60%{opacity: 0.25;}
+      70%{opacity: 0.5;}
+      75%{opacity: 1;}
+      100%{opacity: 0.75;} */
+
+      0%{opacity: 0.8;}
+      50%{opacity: 0.2;}
+      100%{opacity: 0.8;}
+    }
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -54,7 +106,7 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   html {
