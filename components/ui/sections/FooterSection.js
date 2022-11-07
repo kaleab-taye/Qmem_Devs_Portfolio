@@ -1,6 +1,6 @@
 export default function FooterSection({ className }) {
   return (
-    <div className="w-full border-t border-background2">
+    <div className="w-full mt-auto h-[55px] border-t border-background2">
       <div
         className={
           ` mx-auto grid grid-flow-col my-5 lg:mx-10 mx-5  text-textColor3 text-[13px]` +

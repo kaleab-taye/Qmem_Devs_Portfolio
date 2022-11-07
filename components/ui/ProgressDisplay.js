@@ -10,7 +10,7 @@ export default function ProgressDisplay({ heading, items }) {
       <div className="grid grid-flow-row gap-4">
         {items.map((item) => (
           <ProgressItem
-            key={Math.random()}
+            key={item.key}
             name={item.name}
             amount={item.amount}
           />

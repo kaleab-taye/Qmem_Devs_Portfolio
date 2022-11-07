@@ -59,15 +59,15 @@ export default function resume() {
           <ProgressDisplay
             heading="Coding Proficiency"
             items={[
-              { name: 'React', amount: '70%' },
-              { name: 'NEXT Js', amount: '80%' },
+              { name: 'React', amount: '70%', id:'id123432' },
+              { name: 'NEXT Js', amount: '80%', id:'id123432bg' },
             ]}
           />
           <ProgressDisplay
             heading="Coding Proficiency"
             items={[
-              { name: 'HTML/CSS', amount: '100%' },
-              { name: 'Javascript', amount: '6%' },
+              { name: 'HTML/CSS', amount: '100%', id:'id123gad432' },
+              { name: 'Javascript', amount: '6%', id:'id123432kslfdg' },
             ]}
           />
         </div>

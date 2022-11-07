@@ -9,11 +9,12 @@ import { useRouter } from 'next/router';
 export default function BodyLayout({ children, page }) {
   const router = useRouter();
   return (
-    <div className="bg-background1 gap-0 grid grid-flow-row my-auto  gap-2">
-      {/* nav bar */}
-      <Navbar page={page} />
-      {/* animate on page change */}
-      {/* <motion.div
+    <div className="bg-background1  min-h-screen grid grid-flow-row  ">
+      <div className=" gap-0 grid grid-flow-row mb-auto  gap-2">
+        {/* nav bar */}
+        <Navbar page={page} />
+        {/* animate on page change */}
+        {/* <motion.div
         key={router.route}
         initial="initial"
         animate="animate"
@@ -29,11 +30,11 @@ export default function BodyLayout({ children, page }) {
           },
         }}
       > */}
-      <div className="grid ">
-        <div className="grid ">{children}</div>
+        <div className="grid  ">
+          <div className="grid ">{children}</div>
+        </div>
+        {/* </motion.div> */}
       </div>
-      {/* </motion.div> */}
-
       <FooterSection className="  mx-10 " />
     </div>
   );
