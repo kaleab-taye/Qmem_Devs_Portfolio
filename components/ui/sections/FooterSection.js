@@ -3,7 +3,7 @@ export default function FooterSection({ className }) {
     <div className="w-full mt-auto h-[55px] border-t border-background2">
       <div
         className={
-          ` mx-auto grid grid-flow-col my-5 lg:mx-10 mx-5  text-textColor3 text-[13px]` +
+          `  grid grid-flow-col my-5 lg:mx-10 mx-2  text-textColor3 text-[13px]` +
           ' ' +
           className
         }

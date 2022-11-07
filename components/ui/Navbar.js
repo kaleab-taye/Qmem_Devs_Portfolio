@@ -44,9 +44,9 @@ export default function Navbar({ page }) {
             Portfolio
           </div>
         </Link>
-        <Link href="/blog">
+        <Link href="/blogs">
           <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-            Blog
+            Blogs
           </div>
         </Link>
         <Link href="/contact">
@@ -96,9 +96,9 @@ export default function Navbar({ page }) {
               Portfolio
             </div>
           </Link>
-          <Link href="/blog">
+          <Link href="/blogs">
             <div className="transition ease-in-out delay-75 opacity-60 hover:opacity-100 py-3 px-2 cursor-pointer">
-              Blog
+              Blogs
             </div>
           </Link>
           <Link href="/contact">

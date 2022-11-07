@@ -9,13 +9,16 @@ import usePagination from '@mui/material/usePagination';
 import { Box } from '@mui/system';
 import { useEffect, useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize, bindKeyboard } from 'react-swipeable-views-utils';
+import {
+  autoPlay,
+  virtualize,
+  bindKeyboard,
+} from 'react-swipeable-views-utils';
 
 import { duration, useTheme } from '@mui/material/styles';
 import CustomizedPagination from '../CustomizedPagination';
 import PartialUnderline from '../PartialUnderline';
 import TestimonialCard from '../TestimonialCard';
-
 
 const EnhancedSwipeableViews = bindKeyboard(SwipeableViews);
 export default function TestimonialSection() {
@@ -53,7 +56,6 @@ export default function TestimonialSection() {
           onChangeIndex={(index) => {
             setPageNumber(index);
           }}
-         
         >
           <TabPanel
             value={pageNumber}
@@ -84,6 +86,7 @@ export default function TestimonialSection() {
           <span
             className="my-auto border-b w-8 py-6 m-1  cursor-pointer"
             value={0}
+            key="fsad"
             onClick={() => {
               setPageNumber(0);
             }}
@@ -92,6 +95,7 @@ export default function TestimonialSection() {
           <span
             className="my-auto border-b w-8 py-6 m-1 cursor-pointer"
             value={1}
+            key="dsage"
             onClick={() => {
               setPageNumber(1);
             }}
