@@ -10,7 +10,7 @@ import { useState } from 'react';
 export default function Portfolio() {
   const [category, setCategory] = useState('all');
   return (
-    <BodyLayout>
+    <BodyLayout page="portfolio">
       {/* current page desc section start*/}
       <PageHeading heading="Portfolio" subHeading="" />
       {/* current page desc section end*/}
@@ -19,45 +19,69 @@ export default function Portfolio() {
         {/* category option start*/}
         <div className="	 grid grid-flow-col ml-auto  gap-5 my-8 text-textColor1 text-xs">
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer "
             onClick={() => setCategory('all')}
           >
-            All
+            {category === 'all' ? (
+              <div className="opacity-100">All</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">All</div>
+            )}
           </div>
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer hover:opacity-100 "
             onClick={() => setCategory('mobileApp')}
           >
             {' '}
-            Mobile App
+            {category === 'mobileApp' ? (
+              <div className="opacity-100">Mobile App</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">Mobile App</div>
+            )}
           </div>
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer hover:opacity-100 "
             onClick={() => setCategory('webApp')}
           >
             {' '}
-            Web App
+            {category === 'webApp' ? (
+              <div className="opacity-100">Web App</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">Web App</div>
+            )}
           </div>
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer hover:opacity-100 "
             onClick={() => setCategory('ui/ux')}
           >
             {' '}
-            UI/UX Design
+            {category === 'ui/ux' ? (
+              <div className="opacity-100">UI/UX Design</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">UI/UX Design</div>
+            )}
           </div>
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer hover:opacity-100 "
             onClick={() => setCategory('fullstack')}
           >
             {' '}
-            Fullstack
+            {category === 'fullstack' ? (
+              <div className="opacity-100">Fullstack</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">Fullstack</div>
+            )}
           </div>
           <div
-            className="cursor-pointer hover:opacity-100 opacity-50"
+            className="cursor-pointer hover:opacity-100"
             onClick={() => setCategory('website')}
           >
             {' '}
-            Website
+            {category === 'website' ? (
+              <div className="opacity-100">Website</div>
+            ) : (
+              <div className="opacity-50 hover:opacity-100">Website</div>
+            )}
           </div>
         </div>
         {/* category option end*/}

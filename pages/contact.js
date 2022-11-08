@@ -8,33 +8,17 @@ import PageHeading from '../components/ui/PageHeading';
 import PartialUnderline from '../components/ui/PartialUnderline';
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
+import Placeholder from '../components/ui/Placeholder';
 
 export default function Contact() {
   const [iframeLoading, setIframeLoading] = useState(true);
   return (
-    <BodyLayout>
+    <BodyLayout page='contact'>
       <PageHeading heading="Contact" subHeading="Get in Touch" />
       <div className="max-w-maxContentWid mx-10 2xl:mx-auto my-10  grid grid-flow-row">
         {/* map display start */}
-        <div className="relative my-10">
-          {iframeLoading ? (
-            <div className=" absolute w-full h-full grid">
-              <span class="m-auto animate-pulse inline-flex h-full w-full bg-background2 opacity-5"></span>
-            </div>
-          ) : null}
-          <motion.div
-            initial="initial"
-            animate="animate"
-            transition={{ duration: 1 }}
-            variants={{
-              initial: {
-                opacity: 0,
-              },
-              animate: {
-                opacity: 1,
-              },
-            }}
-          >
+        <div className="my-10">
+          <Placeholder isLoading={iframeLoading}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7880.512069730278!2d38.75840150038664!3d9.040393493760007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f642ba9e021%3A0x2321687a606863f3!2sAddis%20Ababa%20Institute%20of%20Technology!5e0!3m2!1sen!2set!4v1667834739518!5m2!1sen!2set"
               width="100%"
@@ -45,7 +29,7 @@ export default function Contact() {
               referrerpolicy="no-referrer-when-downgrade"
               onLoad={() => setIframeLoading(false)}
             ></iframe>
-          </motion.div>
+          </Placeholder>
         </div>
         {/* map display end */}
 
@@ -60,7 +44,7 @@ export default function Contact() {
               <PartialUnderline text="How Can We Help You?" />
             </div>
             <div className="grid grid-flow-row gap-6">
-              <div className="grid grid-flow-row sm:grid-cols-2 gap-4">
+              <div className="grid grid-flow-row md:grid-cols-2 gap-4">
                 <div className="grid grid-flow-row gap-6">
                   <input
                     placeholder="Full Name"

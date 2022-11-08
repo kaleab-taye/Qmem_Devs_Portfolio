@@ -5,7 +5,7 @@ import TimelineDisplay from '../components/ui/TimelineDisplay';
 
 export default function resume() {
   return (
-    <BodyLayout>
+    <BodyLayout page='resume'>
       {/* current page desc section start*/}
       <PageHeading heading="Resume" subHeading="8 Years of Experience" />
       {/* current page desc section end*/}
