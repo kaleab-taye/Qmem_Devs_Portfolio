@@ -40,9 +40,9 @@
 /* changing animation ends */
 
 .s1{opacity: 0;
-  animation: sty1 15s infinite;}
+  animation: sty1 10s infinite;}
   .s2{opacity: 0;
-    animation: sty2 15s infinite;}
+    animation: sty2 10s infinite;}
     @keyframes sty1{
 
       /* 0%{opacity: 0;}

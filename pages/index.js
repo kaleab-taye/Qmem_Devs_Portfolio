@@ -8,11 +8,12 @@ import Button from '../components/ui/Button';
 import WhatWeDoCard from '../components/ui/WhatWeDoCard';
 import PartialUnderline from '../components/ui/PartialUnderline';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { faEye, faGlobe } from '@fortawesome/free-regular-svg-icons';
+import { faEye, faGlobe, faHandshake } from '@fortawesome/free-regular-svg-icons';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import TestimonialSection from '../components/ui/sections/TestimonialSection';
 import FooterSection from '../components/ui/sections/FooterSection';
 import OverviewCard from '../components/ui/OverviewCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         
         <div className="m-auto max-w-maxContentWid">
           {/* landing section start */}
-          <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-10">
+          <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-28">
             <div className="grid m-auto max-w-[350px]  rounded-full inline-flex">
               <div className="relative grid m-auto box-content">
                 {/* changing shadow design start */}
@@ -130,10 +131,10 @@ export default function Home() {
               <PartialUnderline text="Overview" />
             </div>
             <div className=" grid grid-flow-col gap-7">
-              <OverviewCard />
-              <OverviewCard />
-              <OverviewCard />
-              <OverviewCard />
+              <OverviewCard icon={faHandshake} number='34' text ='Projects Completed'/>
+              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
+              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
+              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
             </div>
           </div>
           {/* performance overview end */}
