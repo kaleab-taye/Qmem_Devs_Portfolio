@@ -66,24 +66,25 @@ export default function ShowcaseDisplay({ category }) {
   }, [category]);
 
   return (
-      <AnimatePresence >
-        {display.map((item) => (
-          <motion.div
+    <AnimatePresence>
+      {display.map((item) => (
+        <motion.div
           layout
+          key={item.key}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ShowcaseItem
             key={item.key}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <ShowcaseItem
-              description={item.description}
-              name={item.name}
-              image={item.image}
-            />
-          </motion.div>
-        ))}
-      </AnimatePresence>
+            description={item.description}
+            name={item.name}
+            image={item.image}
+          />
+        </motion.div>
+      ))}
+    </AnimatePresence>
   );
 }
 

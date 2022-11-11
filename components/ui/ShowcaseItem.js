@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import { useState } from 'react';
 import Placeholder from './Placeholder';
+import ShowcaseOverlay from './ShowcaseOverlay';
 
-export default function ShowcaseItem({ image, name, description }) {
+export default function ShowcaseItem({ image, name, description, key }) {
   const [imageLoading, setImageLoading] = useState(true);
+  const [isOverlayOpen, setOverlayOpenState] = useState(false);
   return (
     <Placeholder isLoading={imageLoading}>
       <div className="relative grid grid-flow-col rounded-lg overflow-hidden ">
@@ -14,6 +16,7 @@ export default function ShowcaseItem({ image, name, description }) {
           src={image}
           alt="port image"
           onLoadingComplete={() => setImageLoading(false)}
+          onClick={() => setOverlayOpenState(true)}
         />
         <div className="z-30 pointer-events-none absolute text-sm font-bold bg-background1 mt-2 ml-2 rounded text-textColor1 py-1 px-2">
           {name}
@@ -25,6 +28,11 @@ export default function ShowcaseItem({ image, name, description }) {
           <FontAwesomeIcon className="text-accentColor" icon={faLink} />
         </div>
       </div>
+      <ShowcaseOverlay
+        isOverlayOpen={isOverlayOpen}
+        setOverlayOpenState={setOverlayOpenState}
+        key={key}
+      />
     </Placeholder>
   );
 }

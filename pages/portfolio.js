@@ -14,10 +14,10 @@ export default function Portfolio() {
       {/* current page desc section start*/}
       <PageHeading heading="Portfolio" subHeading="" />
       {/* current page desc section end*/}
-      <div className="grid grid-flow-row mx-10  2xl:mx-auto max-w-maxContentWid">
-        {/* category option start*/}
-        <div className="ml-auto my-8 grid">
-          <div className="	 grid grid-flow-col ml-auto  gap-5  text-textColor1 text-xs">
+      <div className="grid grid-flow-row mb-20 mx-10 2xl:mx-auto max-w-maxContentWid">
+        <div className="  2xl:mx-auto my-10  grid grid-flow-row">
+          {/* option display start */}
+          <div className="my-10 grid grid-flow-col ml-auto  gap-5  text-textColor1 text-xs">
             <div className="cursor-pointer " onClick={() => setCategory('all')}>
               {category === 'all' ? (
                 <div className="opacity-100">All</div>
@@ -81,17 +81,10 @@ export default function Portfolio() {
               )}
             </div>
           </div>
-          {/* hidden display to maintain width start */}
-          <div className="h-0 overflow-hidden opacity-0 grid grid-cols-2 md:grid-cols-3 gap-4">
-            <ShowcaseDisplay category="all" />
-          </div>
-          {/* hidden display to maintain width end */}
-        </div>
-        {/* category option end*/}
-        <div className="  2xl:mx-auto my-10  grid grid-flow-row">
+          {/* option display end */}
           {/* portfolio display start */}
           <div className=" grid grid-cols-2 md:grid-cols-3 gap-4 ">
-          <ShowcaseDisplay category={category} />
+            <ShowcaseDisplay category={category} />
           </div>
           {/* portfolio display start */}
         </div>

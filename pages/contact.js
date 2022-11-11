@@ -1,4 +1,12 @@
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLocation,
+  faLocationPin,
+  faMailBulk,
+  faMailForward,
+  faMapLocation,
+  faPhone,
+  faVoicemail,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Input, OutlinedInput, Skeleton, TextField } from '@mui/material';
 import { useState } from 'react';
@@ -13,7 +21,7 @@ import Placeholder from '../components/ui/Placeholder';
 export default function Contact() {
   const [iframeLoading, setIframeLoading] = useState(true);
   return (
-    <BodyLayout page='contact'>
+    <BodyLayout page="contact">
       <PageHeading heading="Contact" subHeading="Get in Touch" />
       <div className="max-w-maxContentWid mx-10 2xl:mx-auto my-10  grid grid-flow-row">
         {/* map display start */}
@@ -35,9 +43,21 @@ export default function Contact() {
 
         <div className="text-textColor1 grid grid-flow-row sm:grid-cols-3 gap-8">
           <div className="grid grid-flow-row mb-auto gap-8">
-            <ContactCardItem />
-            <ContactCardItem />
-            <ContactCardItem />
+            <ContactCardItem
+              icon={faPhone}
+              text="+251979036773"
+              description="Give us a call"
+            /><ContactCardItem
+              icon={faMapLocation}
+              text="Addis Ababa Ethiopia"
+              description="Addis Ababa University 5kilo campus, Addis Ababa Institute of Technology"
+            />
+            <ContactCardItem
+              icon={faMailBulk}
+              text="qmemdevelopers@gmail.com"
+              description="Send us an email with a brief description of your case and our team will get back to you in no time"
+            />
+            
           </div>
           <div className="grid grid-flow-row gap-8 sm:col-span-2">
             <div>

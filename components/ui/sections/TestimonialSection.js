@@ -8,39 +8,23 @@ import {
 import usePagination from '@mui/material/usePagination';
 import { Box } from '@mui/system';
 import { useEffect, useState } from 'react';
+
 import SwipeableViews from 'react-swipeable-views';
 import {
   autoPlay,
   virtualize,
   bindKeyboard,
 } from 'react-swipeable-views-utils';
+import { useTheme } from '@mui/material';
+import TabPanel from '../../TabPanel';
 
-import { duration, useTheme } from '@mui/material/styles';
 import CustomizedPagination from '../CustomizedPagination';
 import PartialUnderline from '../PartialUnderline';
 import TestimonialCard from '../TestimonialCard';
+import CustomPagination from '../CustomPagination';
 
-const EnhancedSwipeableViews = bindKeyboard(SwipeableViews);
+const EnhancedSwipeableViews = autoPlay(bindKeyboard(SwipeableViews));
 export default function TestimonialSection() {
-  const TabPanel = (props) => {
-    const { children, value, index, ...other } = props;
-
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`full-width-tabpanel-${index}`}
-        aria-labelledby={`full-width-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  };
   const [pageNumber, setPageNumber] = useState(0);
   const theme = useTheme();
 
@@ -56,6 +40,10 @@ export default function TestimonialSection() {
           onChangeIndex={(index) => {
             setPageNumber(index);
           }}
+          style={{ transition: '2.15s ease' }}
+          enableMouseEvents
+          className="duration-1000"
+          slideClassName=" transition-all ease-in-out duration-1000"
         >
           <TabPanel
             value={pageNumber}
@@ -74,33 +62,20 @@ export default function TestimonialSection() {
               <TestimonialCard by="Abel Tesema" />{' '}
             </span>
           </TabPanel>
+          <TabPanel value={pageNumber} index={2} dir={theme.direction}>
+            <span className=" grid grid-flow-row md:grid-flow-col  -m-6">
+              <TestimonialCard by="Eyob Mekonen" />
+              <TestimonialCard by="Abel Tesema" />{' '}
+            </span>
+          </TabPanel>
         </EnhancedSwipeableViews>
-        <Tabs
-          value={pageNumber}
-          aria-label=""
-          onChange={(e, index) => {
-            setPageNumber(index);
-          }}
-          centered
-        >
-          <span
-            className="my-auto border-b w-8 py-6 m-1  cursor-pointer"
-            value={0}
-            key="fsad"
-            onClick={() => {
-              setPageNumber(0);
-            }}
-          ></span>
-
-          <span
-            className="my-auto border-b w-8 py-6 m-1 cursor-pointer"
-            value={1}
-            key="dsage"
-            onClick={() => {
-              setPageNumber(1);
-            }}
-          ></span>
-        </Tabs>
+        <div className="m-auto">
+          <CustomPagination
+            length={3}
+            currentIndex={pageNumber}
+            currentIndexSetter={setPageNumber}
+          />
+        </div>
       </div>
       <div className="mx-auto">
         {/* <CustomizedPagination

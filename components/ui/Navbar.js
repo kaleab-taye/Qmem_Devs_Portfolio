@@ -1,3 +1,4 @@
+import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Drawer } from '@mui/material';
@@ -6,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import logoImage from '../../public/Logo.png';
+import ThemeSwitchIcon from './ThemeSwitchIcon';
 
 export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
@@ -19,7 +21,7 @@ export default function Navbar({ page }) {
     { id: 'portfolio', name: 'Portfolio', path: '/portfolio', class: '' },
     { id: 'blogs', name: 'Blogs', path: '/blogs', class: '' },
     { id: 'contact', name: 'Contact Us', path: '/contact', class: '' },
-    { id: 'hire', name: 'Hire Us', path: '/hire', class: '' },
+    // { id: 'hire', name: 'Hire Us', path: '/hire', class: '' },
   ];
 
   return (
@@ -41,7 +43,12 @@ export default function Navbar({ page }) {
         </div>
       </div>
       {/* logo and name start */}
-      <div className="text-sm hidden lg:grid grid-flow-col ml-auto gap-12 my-auto text-textColor3 ">
+      {/* theme switch start */}
+      <div className='my-auto ml-auto'>
+      
+      <ThemeSwitchIcon/></div>
+      {/* theme switch end */}
+      <div className="text-sm hidden lg:grid grid-flow-col ml-auto gap-6 xl:gap-12 my-auto text-textColor3 ">
         {pages.map((item) => (
           <Link href={item.path} key={item.id}>
             <div className={`transition ease-in-out `}>
@@ -53,6 +60,13 @@ export default function Navbar({ page }) {
             </div>
           </Link>
         ))}
+        <div className="relative grid my-auto">
+          <div className="font-bold text-[magenta,cyan] z-10 my-auto rounded-xl  py-2 px-3 text-textColor1 ">
+            Hire us
+          </div>
+          <div className="hireAnim1 z-0 shadow-[0px_0px_8px_0.25px_magenta] shadow-magenta absolute rounded-xl bg-gree w-full h-full"></div>
+          <div className="hireAnim2 z-0 shadow-[0px_0px_8px_0.25px_textColor1] shadow-accentColor absolute rounded-xl bg-gree w-full h-full"></div>
+        </div>
       </div>
       <div
         className="block lg:hidden ml-auto my-auto cursor-pointer"

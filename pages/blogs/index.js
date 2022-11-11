@@ -1,5 +1,5 @@
-import BodyLayout from '../components/ui/BodyLayout';
-import PageHeading from '../components/ui/PageHeading';
+import BodyLayout from '../../components/ui/BodyLayout';
+import PageHeading from '../../components/ui/PageHeading';
 
 export default function blogs() {
   return (

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 export default function BodyLayout({ children, page }) {
   const router = useRouter();
   return (
-    <div className="bg-background1  min-h-screen grid grid-flow-row  ">
+    <div className="min-h-screen grid grid-flow-row  ">
       <div className=" gap-0 grid grid-flow-row mb-auto  gap-2">
         {/* nav bar */}
         <Navbar page={page} />

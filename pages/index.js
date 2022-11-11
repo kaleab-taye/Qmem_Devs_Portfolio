@@ -7,19 +7,35 @@ import heroImage from '../public/Programmer-amico.svg';
 import Button from '../components/ui/Button';
 import WhatWeDoCard from '../components/ui/WhatWeDoCard';
 import PartialUnderline from '../components/ui/PartialUnderline';
-import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { faEye, faGlobe, faHandshake } from '@fortawesome/free-regular-svg-icons';
+import {
+  faDatabase,
+  faDesktop,
+  faHourglass,
+  faMobile,
+  faMobilePhone,
+  faPen,
+  faPhone,
+  faProjectDiagram,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faEye,
+  faGlobe,
+  faHandshake,
+  faStar,
+} from '@fortawesome/free-regular-svg-icons';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import TestimonialSection from '../components/ui/sections/TestimonialSection';
 import FooterSection from '../components/ui/sections/FooterSection';
 import OverviewCard from '../components/ui/OverviewCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
+import { faAndroid } from '@fortawesome/free-brands-svg-icons';
+import WhatWeDoSection from '../components/ui/sections/WhatWeDoSection';
 
 export default function Home() {
   return (
     <BodyLayout page="home">
       <div className="max-w-maxContentWid   mx-10 2xl:mx-auto  my-auto">
-        
         <div className="m-auto max-w-maxContentWid">
           {/* landing section start */}
           <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-28">
@@ -32,6 +48,7 @@ export default function Home() {
 
                 <div className="w-fit grid m-auto h-fit rounded-full border border-background2 border-8  bg-gray-500">
                   <Image
+                    priority
                     className="relative m-auto object-cover w-96 p-5 overflow-visible"
                     alt="Hero image"
                     src={heroImage}
@@ -53,74 +70,26 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-textColor2 opacity-100 text-sm ">
-                We are a group of dedicated, hardworking and proficient software
+                We are a team of Dedicated, Hardworking and Proficient software
                 engineers from Addis Ababa University with experience of
-                successfully accomplishing tasks and plans to work on
+                successfully delivering projects and plans to work on
                 challenging projects in the future.{' '}
               </div>
               <div className="mr-auto grid grid-flow-col gap-4 ">
                 <Button placeholder={'Download CV'} />
-                <Button
-                  placeholder={'Contact Us'}
-                  hover=" hover:bg-textColor3 hover:text-background1 "
-                  ring="ring-textColor1"
-                />
+                <Link className="" href="/contact">
+                  <Button
+                    placeholder={'Contact Us'}
+                    hover="hover:bg-textColor3 hover:text-background1 "
+                    ring="ring-textColor1"
+                  />
+                </Link>
               </div>
             </div>
           </div>
           {/* landing section end */}
           {/* what we do section start */}
-          <div className="m-auto grid grid-flow-row gap-8 text-textColor1 my-10">
-            <div className="">
-              <PartialUnderline text="What We Do" />
-            </div>
-            <div className="grid grid-flow-row sm:grid-flow-col ">
-              <div className="grid grid-flow-row">
-                <WhatWeDoCard
-                  title="Frontend Web App"
-                  description="Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex."
-                >
-                  <Image
-                    className="text-red-500"
-                    src={backendPng}
-                    alt="backend"
-                  />
-                </WhatWeDoCard>
-                <WhatWeDoCard
-                  title="Backend Api"
-                  description="Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex."
-                >
-                  <Image
-                    className="text-red-500"
-                    src={backendPng}
-                    alt="backend"
-                  />
-                </WhatWeDoCard>
-              </div>
-              <div className="grid grid-flow-row">
-                <WhatWeDoCard
-                  title="Website"
-                  description="Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex."
-                >
-                  <Image
-                    className="text-red-500"
-                    src={backendPng}
-                    alt="backend"
-                  />
-                </WhatWeDoCard>
-                <WhatWeDoCard
-                  title="SEO Optimazation"
-                  description="Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex."
-                >
-                  <Image
-                    className="text-red-500"
-                    src={backendPng}
-                    alt="backend"
-                  />
-                </WhatWeDoCard>
-              </div>
-            </div>
-          </div>
+          <WhatWeDoSection/>
           {/* what we do section end */}
           {/* testimonials section start */}
           <TestimonialSection />
@@ -130,11 +99,31 @@ export default function Home() {
             <div>
               <PartialUnderline text="Overview" />
             </div>
-            <div className=" grid grid-flow-col gap-7">
-              <OverviewCard icon={faHandshake} number='34' text ='Projects Completed'/>
-              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
-              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
-              <OverviewCard icon={faHandshake} number='20' text ='Satisfied Clients'/>
+            <div className=" grid grid-flow-row sm:grid-flow-col gap-7">
+              <OverviewCard
+                icon={faProjectDiagram}
+                number={34}
+                unit="+"
+                text="Projects Completed"
+              />
+              <OverviewCard
+                icon={faHandshake}
+                number={20}
+                unit="+"
+                text="Satisfied Clients"
+              />
+              <OverviewCard
+                icon={faStar}
+                number={100}
+                unit="%"
+                text="Job Success"
+              />
+              <OverviewCard
+                icon={faHourglass}
+                number={2}
+                unit="+"
+                text="Years of Experience"
+              />
             </div>
           </div>
           {/* performance overview end */}
