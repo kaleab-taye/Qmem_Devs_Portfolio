@@ -69,7 +69,7 @@ export default function Home() {
                   Qmem Developers
                 </div>
               </div>
-              <div className="text-textColor2 opacity-100 text-sm ">
+              <div className="text-textColor2 opacity-70  text-md  ">
                 We are a team of Dedicated, Hardworking and Proficient software
                 engineers from Addis Ababa University with experience of
                 successfully delivering projects and plans to work on
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           {/* landing section end */}
           {/* what we do section start */}
-          <WhatWeDoSection/>
+          <WhatWeDoSection />
           {/* what we do section end */}
           {/* testimonials section start */}
           <TestimonialSection />

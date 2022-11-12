@@ -7,9 +7,9 @@ export default function mobileApp() {
   return (
     <BodyLayout>
       <PageHeading heading="Mobile Apps" />
-      <div className="text-textColor1 text-md grid gap-10 max-w-maxContentWid mx-10 2xl:mx-auto my-10 grid grid-flow-row">
-        <div className='grid grid-flow-row md:grid-flow-col bg-red-500'>
-          <div className="text-xl">
+      <div className="text-textColor1 text-md grid gap-10 max-w-maxHeroWid mx-10 2xl:mx-auto my-10 grid grid-flow-row">
+        <div className='grid grid-flow-row md:grid-flow-col gap-8 '>
+          <div className="text-xl my-auto opacity-70 text-justify">
             Mobile applications are the keystone for many businesses in the
             digital age. Apps running on smart devices give customers greater
             access to company-related resources and gives companies the chance
@@ -19,7 +19,7 @@ export default function mobileApp() {
             this seemingly infinite market and expand to reach its long-term
             growth goals in a much shorter time frame.
           </div>
-          <div className="grid mx-auto">
+          <div className="grid m-auto">
             <Image alt="service image" src={serviceImg1} />
           </div>
         </div>
