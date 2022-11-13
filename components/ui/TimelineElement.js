@@ -6,10 +6,14 @@ export default function TimelineElement({
   className,
 }) {
   return (
-    <div className={"border-l border-background2  p-4 m-4 grid my-auto "+' '+className}>
+    <div
+      className={
+        'border-l border-background2 dark:border-background2Dark  p-4 m-4 grid my-auto ' + ' ' + className
+      }
+    >
       {/* date and area start */}
       <div className="grid grid-flow-col m-auto gap-2 m-auto absolute -ml-10 -mt-3 ">
-        <div className="rounded-full px-3 py-px  m-auto border-2 inline-flex border-accentColor bg-background1 text-[13px] font-semibold opacity-90">
+        <div className="rounded-full px-3 py-px  m-auto border-2 inline-flex border-accentColor dark:border-accentColorDark bg-background1 dark:bg-background1Dark text-[13px] font-semibold opacity-90">
           {duration}
         </div>
         <div className="m-auto text-sm opacity-50">{place}</div>

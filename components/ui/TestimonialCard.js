@@ -5,7 +5,7 @@ import logoImage from '../../public/Logo.png';
 
 export default function TestimonialCard({ image, body, by, position }) {
   return (
-    <span className="max-w-[595px] m-[30px] border-2 bg-background3 rounded-lg border-background2 text-textColor1 z-1 ">
+    <span className="max-w-[595px] m-[30px] border-2 bg-background3 dark:bg-background3Dark rounded-lg border-background2 dark:border-background2Dark text-textColor1 dark:text-textColor1Dark z-1 ">
       <span className="absolute mt-[-30px] ml-[-30px] h-[80px] w-[80px]">
         <Image
           className="rounded-full w-[80px] h-[80px]"
@@ -27,12 +27,12 @@ export default function TestimonialCard({ image, body, by, position }) {
       </span>
       <span className="grid ">
         <FontAwesomeIcon
-          className="text-background2 -mt-[75px] ml-[20px] w-[30px] h-[25px]"
+          className="text-background2 dark:text-background2Dark -mt-[75px] ml-[20px] w-[30px] h-[25px]"
           icon={faQuoteLeft}
         />
         <span className="ml-auto">
           <FontAwesomeIcon
-            className="absolute text-background2 w-[31.5px] h-[36px] -ml-[10px] -mt-[20px] -z-1 "
+            className="absolute text-background2 dark:text-background2Dark w-[31.5px] h-[36px] -ml-[10px] -mt-[20px] -z-1 "
             icon={faQuoteRight}
           />
         </span>

@@ -1,9 +1,9 @@
 export default function FooterSection({ className }) {
   return (
-    <div className="w-full mt-auto h-[55px] border-t border-background2">
+    <div className="w-full mt-auto h-[55px] border-t border-background2 dark:border-background2Dark">
       <div
         className={
-          `  grid grid-flow-col my-5 lg:mx-10 mx-2  text-textColor3 text-[13px]` +
+          `  grid grid-flow-col my-5 lg:mx-10 mx-2  text-textColor3 dark:text-textColor3Dark text-[13px]` +
           ' ' +
           className
         }
@@ -19,7 +19,9 @@ export default function FooterSection({ className }) {
             Instagram
           </div>
         </div>
-        <div className="ml-auto my-auto text-textColor1 opacity-80">© 2022 All rights reserved.</div>
+        <div className="ml-auto my-auto text-textColor1 dark:text-textColor1Dark opacity-80">
+          © 2022 All rights reserved.
+        </div>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default function Portfolio() {
       <div className="grid grid-flow-row mb-20 mx-10 2xl:mx-auto max-w-maxContentWid">
         <div className="  2xl:mx-auto my-10  grid grid-flow-row">
           {/* option display start */}
-          <div className="my-10 grid grid-flow-col ml-auto  gap-5  text-textColor1 text-xs">
+          <div className="my-10 grid grid-flow-col ml-auto  gap-5  text-textColor1 dark:text-textColor1Dark text-xs">
             <div className="cursor-pointer " onClick={() => setCategory('all')}>
               {category === 'all' ? (
                 <div className="opacity-100">All</div>

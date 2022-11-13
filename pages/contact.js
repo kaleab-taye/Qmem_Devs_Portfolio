@@ -41,13 +41,14 @@ export default function Contact() {
         </div>
         {/* map display end */}
 
-        <div className="text-textColor1 grid grid-flow-row sm:grid-cols-3 gap-8">
+        <div className="text-textColor1 dark:text-textColor1Dark grid grid-flow-row sm:grid-cols-3 gap-8">
           <div className="grid grid-flow-row mb-auto gap-8">
             <ContactCardItem
               icon={faPhone}
               text="+251979036773"
               description="Give us a call"
-            /><ContactCardItem
+            />
+            <ContactCardItem
               icon={faMapLocation}
               text="Addis Ababa Ethiopia"
               description="Addis Ababa University 5kilo campus, Addis Ababa Institute of Technology"
@@ -57,7 +58,6 @@ export default function Contact() {
               text="qmemdevelopers@gmail.com"
               description="Send us an email with a brief description of your case and our team will get back to you in no time"
             />
-            
           </div>
           <div className="grid grid-flow-row gap-8 sm:col-span-2">
             <div>
@@ -68,22 +68,22 @@ export default function Contact() {
                 <div className="grid grid-flow-row gap-6">
                   <input
                     placeholder="Full Name"
-                    className="p-2 bg-background1 border-2 border-background2 focus:border-background2 rounded"
+                    className="p-2 bg-background1 dark:bg-background1Dark border-2 border-background2 dark:border-background2Dark dark:focus:border-background2Dark focus:border-background2 rounded"
                   />
                   <input
                     placeholder="Email"
-                    className="p-2 bg-background1 border-2 border-background2 focus:border-background2 rounded"
+                    className="p-2 bg-background1 dark:bg-background1Dark border-2 border-background2 dark:border-background2Dark dark:focus:border-background2Dark focus:border-background2 rounded"
                   />
                   <input
                     placeholder="Subject"
-                    className="p-2 bg-background1 border-2 border-background2 focus:border-background2 rounded"
+                    className="p-2 bg-background1 dark:bg-background1Dark border-2 border-background2 dark:border-background2Dark dark:focus:border-background2Dark focus:border-background2 rounded"
                   />
                 </div>
                 <div>
                   {' '}
                   <textarea
                     placeholder="Message"
-                    className="p-2 h-full w-full bg-background1 border-2 border-background2 focus:border-background2 rounded"
+                    className="p-2 h-full w-full bg-background1 dark:bg-background1Dark border-2 border-background2  dark:border-background2Dark dark:focus:border-background2Dark  focus:border-background2 rounded"
                   />
                 </div>
               </div>

@@ -37,9 +37,9 @@ export default function CustomizedPagination({
                 {...item}
               >
                 {selected ? (
-                  <div className="w-10  border-b border-accentColor border-2 mx-2"></div>
+                  <div className="w-10  border-b border-accentColor dark:border-accentColorDark border-2 mx-2"></div>
                 ) : (
-                  <div onClick={(e)=>setPageNumber(page)} className="w-10 border-b border-background2 opacity-80 border-2 mx-1"></div>
+                  <div onClick={(e)=>setPageNumber(page)} className="w-10 border-b border-background2 dark:border-background2Dark opacity-80 border-2 mx-1"></div>
                 )}
               </button>
             );

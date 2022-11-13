@@ -10,14 +10,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background1: '#222222',
-        background2: '#444444',
-        background3:'#282828',
-        textColor1: '#FFFFFF',
-        textColor2: '#D5D5D5',
-        textColor3: '#F5F5F5',
-        accentColor: '#007ced',
+        background1: '#ffffff',
+        background2: '#e5e5e5',
+        background3:'#fcfcfc',
+        textColor1: '#333333',
+        textColor2: '#666',
+        textColor3: '#aaa',
+        accentColor: '#54ca95',
 
+        background1Dark: '#222222',
+        background2Dark: '#444444',
+        background3Dark:'#282828',
+        textColor1Dark: '#FFFFFF',
+        textColor2Dark: '#D5D5D5',
+        textColor3Dark: '#F5F5F5',
+        accentColorDark: '#007ced',
       },
       fontFamily: {
         sans: [

@@ -42,11 +42,11 @@ export default function Home() {
             <div className="grid m-auto max-w-[350px]  rounded-full inline-flex">
               <div className="relative grid m-auto box-content">
                 {/* changing shadow design start */}
-                <div className="s1 rounded-full shadow-[-3px_-3px_10px_2px_textColor1] shadow-textColor1    absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
-                <div className="s2 rounded-full shadow-[3px_-3px_10px_2px_textColor1] shadow-accentColor absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
+                <div className="s1 rounded-full shadow-[-3px_-3px_10px_2px_textColor1] dark:shadow-[-3px_-3px_10px_2px_textColor1Dark] shadow-textColor1 dark:shadow-textColor1Dark    absolute w-full h-fill top-0  -inset-0.5"></div>
+                <div className="s2 rounded-full shadow-[3px_-3px_10px_2px_textColor1] dark:shadow-[3px_-3px_10px_2px_textColor1Dark] shadow-accentColor dark:shadow-accentColorDark absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
                 {/* changing shadow design end */}
 
-                <div className="w-fit grid m-auto h-fit rounded-full border border-background2 border-8  bg-gray-500">
+                <div className="w-fit grid m-auto h-fit rounded-full border border-background2 dark:border-background2Dark border-8  bg-gray-500">
                   <Image
                     priority
                     className="relative m-auto object-cover w-96 p-5 overflow-visible"
@@ -58,18 +58,18 @@ export default function Home() {
             </div>
             <div className="my-auto grid grid-flow-row gap-5">
               <div className="grid gap-1">
-                <div className="text-textColor3 opacity-60 mb-5">
+                <div className="text-textColor3 dark:text-textColor3Dark opacity-60 mb-5">
                   <div className="b1 absolute">Frontend Web</div>{' '}
                   <div className="b2 absolute">Backend Api</div>{' '}
                   <div className="b3 absolute">Mobile App</div>
                   <div className="b4 absolute">Ui / Ux design</div>
                   <div className="b5 absolute">Website</div>
                 </div>
-                <div className="text-textColor1 text-5xl font-bold">
+                <div className="text-textColor1 dark:text-textColor1Dark text-5xl font-bold">
                   Qmem Developers
                 </div>
               </div>
-              <div className="text-textColor2 opacity-70  text-md  ">
+              <div className="text-textColor2 dark:text-textColor2Dark opacity-70  text-md  ">
                 We are a team of Dedicated, Hardworking and Proficient software
                 engineers from Addis Ababa University with experience of
                 successfully delivering projects and plans to work on
@@ -80,8 +80,8 @@ export default function Home() {
                 <Link className="" href="/contact">
                   <Button
                     placeholder={'Contact Us'}
-                    hover="hover:bg-textColor3 hover:text-background1 "
-                    ring="ring-textColor1"
+                    hover="hover:bg-textColor3 dark:hover:bg-textColor3Dark hover:text-background1 dark:hover:text-background1Dark "
+                    ring="ring-textColor1 dark:ring-textColor1Dark"
                   />
                 </Link>
               </div>
@@ -95,7 +95,7 @@ export default function Home() {
           <TestimonialSection />
           {/* testimonials section end */}
           {/* performance overview start */}
-          <div className="m-auto grid grid-flow-row gap-8 text-textColor1 my-10">
+          <div className="m-auto grid grid-flow-row gap-8 text-textColor1 dark:text-textColor1Dark my-10">
             <div>
               <PartialUnderline text="Overview" />
             </div>

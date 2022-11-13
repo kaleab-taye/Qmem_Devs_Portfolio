@@ -7,7 +7,7 @@ export default function mobileApp() {
   return (
     <BodyLayout>
       <PageHeading heading="Mobile Apps" />
-      <div className="text-textColor1 text-md grid gap-10 max-w-maxHeroWid mx-10 2xl:mx-auto my-10 grid grid-flow-row">
+      <div className="text-textColor1 dark:text-textColor1Dark text-md grid gap-10 max-w-maxHeroWid mx-10 2xl:mx-auto my-10 grid grid-flow-row">
         <div className='grid grid-flow-row md:grid-flow-col gap-8 '>
           <div className="text-xl my-auto opacity-70 text-justify">
             Mobile applications are the keystone for many businesses in the

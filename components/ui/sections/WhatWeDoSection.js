@@ -13,7 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function WhatWeDoSection() {
   return (
-    <div className="m-auto grid grid-flow-row gap-8 text-textColor1 my-10">
+    <div className="m-auto grid grid-flow-row gap-8 text-textColor1 dark:text-textColor1Dark my-10">
       <div className="">
         <PartialUnderline text="What We Do" />
       </div>
@@ -50,7 +50,7 @@ export default function WhatWeDoSection() {
             title="Website"
             description="We Design, Build and Launch your website to support your business growth by providing marketing, advertising, customer education, company branding, and sales channels conveniently rolled into one system."
           >
-          <Image className="" src={websiteIcon} alt="seo icon" />
+            <Image className="" src={websiteIcon} alt="seo icon" />
           </WhatWeDoCard>
         </div>
       </div>

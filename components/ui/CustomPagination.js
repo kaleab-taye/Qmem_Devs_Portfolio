@@ -17,11 +17,11 @@ export default function CustomPagination({
         >
           {currentIndex === arr ? (
             <span className="grid py-3 my-auto ">
-              <span className="grid w-11 bg-accentColor py-1 rounded-xl h-px "></span>
+              <span className="grid w-11 bg-accentColor dark:bg-accentColorDark py-1 rounded-xl h-px "></span>
             </span>
           ) : (
             <span className="grid py-3 my-auto  cursor-pointer">
-              <span className="grid py-1 bg-background2 rounded h-px grid w-8"></span>
+              <span className="grid py-1 bg-background2 dark:bg-background2Dark rounded h-px grid w-8"></span>
             </span>
           )}
         </div>

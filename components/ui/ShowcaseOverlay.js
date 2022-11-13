@@ -64,21 +64,21 @@ export default function ShowcaseOverlay({
               },
             }}
           >
-            <div className="fixed z-40   bg-background1 w-full h-full  top-0 left-0 grid">
+            <div className="fixed z-40   bg-background1 dark:bg-background1Dark w-full h-full  top-0 left-0 grid">
               <div className=" max-w-maxHeroWid mx-10 2xl:mx-auto my-5  grid grid-flow-row gap-5 mb-auto">
                 {/* close icon start */}
                 <div
-                  className="ml-auto bg-background3  grid p-2 rounded cursor-pointer"
+                  className="ml-auto bg-background3 dark:bg-background3Dark  grid p-2 rounded cursor-pointer"
                   onClick={() => setOverlayOpenState(false)}
                 >
                   <FontAwesomeIcon
-                    className="text-textColor1 opacity-60 w-[23px] h-[23px] m-auto"
+                    className="text-textColor1 dark:text-textColor1Dark opacity-60 w-[23px] h-[23px] m-auto"
                     icon={faXmark}
                   />
                 </div>
                 {/* close icon end */}
 
-                <div className="grid grid-flow-row md:grid-cols-3 text-textColor1 gap-5 lg:gap-10">
+                <div className="grid grid-flow-row md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10">
                   <div className="col-span-2">
                     <div className="font-bold text-[32px]">
                       Shuk-Shukta Blogs
@@ -118,7 +118,7 @@ export default function ShowcaseOverlay({
                     {/* scrolling image canvas end */}
                   </div>
                   {/* information box start */}
-                  <div className="border-2 border-background2 bg-background3 rounded-2xl p-8 grid gap-4">
+                  <div className="border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
                     {/* description start */}
                     <div className="grid gap-3 overflow-hidden">
                       <div className="font-bold text-[18px]">Description</div>
@@ -126,7 +126,7 @@ export default function ShowcaseOverlay({
                         {/* customer type start */}
                         <div className="grid grid-flow-col gap-2 mr-auto">
                           <FontAwesomeIcon
-                            className="w-[16px] my-auto text-accentColor"
+                            className="w-[16px] my-auto text-accentColor dark:text-accentColorDark"
                             icon={faUser}
                           />
                           <div className="text-sm font-medium my-auto opacity-80">
@@ -138,7 +138,7 @@ export default function ShowcaseOverlay({
                         {/* calendar start */}
                         <div className="grid grid-flow-col gap-2 mr-auto">
                           <FontAwesomeIcon
-                            className="w-[16px] my-auto text-accentColor"
+                            className="w-[16px] my-auto text-accentColor dark:text-accentColorDark"
                             icon={faCalendarAlt}
                           />
                           <div className="text-sm font-medium my-auto opacity-80">
@@ -147,7 +147,7 @@ export default function ShowcaseOverlay({
                         </div>
                         {/* calendar end */}
                         {/* website link start */}
-                        <div className="grid grid-flow-col gap-2 mr-auto text-accentColor">
+                        <div className="grid grid-flow-col gap-2 mr-auto text-accentColor dark:text-accentColorDark">
                           <FontAwesomeIcon
                             className="w-[16px] my-auto "
                             icon={faEarthAmericas}
@@ -173,22 +173,22 @@ export default function ShowcaseOverlay({
                     <div className="grid gap-3 overflow-hidden">
                       <div className="font-bold text-[18px]">Technology</div>
                       <div className="flex gap-2 justify-start flex-wrap">
-                        <div className="text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           Next Js
                         </div>
-                        <div className="text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           tailwindcss
                         </div>
-                        <div className="text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           Next Js
                         </div>
-                        <div className="text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           tailwindcss
                         </div>
-                        <div className="text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           Next Js
                         </div>
-                        <div className="mr-auto text-sm p-1 text-textColor3 rounded bg-background2 ">
+                        <div className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark ">
                           tailwindcss
                         </div>
                       </div>
@@ -196,19 +196,19 @@ export default function ShowcaseOverlay({
                     <div className="grid gap-3 overflow-hidden">
                       <div className="font-bold text-[18px]">Share</div>
                       <div className="grid mr-auto gap-2 grid-cols-auto grid-rows-auto grid-flow-col overflow- ">
-                        <div className=" text-textColor3   m-auto grid">
+                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faSquareFacebook}
                           />
                         </div>
-                        <div className=" text-textColor3   m-auto grid">
+                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faLinkedin}
                           />
                         </div>
-                        <div className=" text-textColor3   m-auto grid">
+                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faInstagram}

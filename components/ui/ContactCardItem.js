@@ -5,7 +5,7 @@ export default function ContactCardItem({ icon, text, description }) {
   return (
     <div className=' w-full grid'>
       <div className="grid grid-flow-col mr-auto gap-4">
-        <div className="text-accentColor  mr-auto mt-2 ">
+        <div className="text-accentColor dark:text-accentColorDark mr-auto mt-2 ">
           <FontAwesomeIcon className="w-[23px] h-[23px] m-auto" icon={icon} />
         </div>
         <div className="grid grid-flow-row   ">
