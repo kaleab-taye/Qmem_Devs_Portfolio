@@ -81,7 +81,7 @@ export default function Home() {
                   <Button
                     placeholder={'Contact Us'}
                     hover="hover:bg-textColor3 dark:hover:bg-textColor3Dark hover:text-background1 dark:hover:text-background1Dark "
-                    ring="ring-textColor1 dark:ring-textColor1Dark"
+                    ring="ring-textColor3 dark:ring-textColor3Dark"
                   />
                 </Link>
               </div>

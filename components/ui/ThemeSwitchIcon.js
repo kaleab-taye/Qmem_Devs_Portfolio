@@ -1,37 +1,48 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 export default function ThemeSwitchIcon() {
-  const [themeState, setThemeState] = useState('light');
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme('light');
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() =>{
+  function switchTheme (){
+    console.log('switch')
+    if(theme === 'light'){
+      setTheme('dark')
+    }else{
+      setTheme('light')
+
+    }
+  }
+
+  useEffect(() => {
     setMounted(true);
-  },[])
+  }, []);
   const renderThemeChanger = () => {
-    if(!mounted) return null;
+    if (!mounted) return null;
 
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
     if (currentTheme === 'dark') {
       return (
         <div
-          className="w-10 h-10 text-yellow-500 "
+          className=" text-textColor1Dark mr-auto grid w-fit "
           role="button"
-          onClick={() => setTheme('light')}
+          // onClick={() => setTheme('light')}
         >
-          sun
+          <FontAwesomeIcon className="w-5 h-5" icon={faSun} />
         </div>
       );
     } else {
       return (
         <div
-          className="w-10 h-10 text-gray-900 "
+          className=" text-textColor1 ml-auto grid w-fit"
           role="button"
-          onClick={() => setTheme('dark')}
+          // onClick={() => setTheme('dark')}
         >
-          dark
+          <FontAwesomeIcon className="w-5 h-5" icon={faMoon} />
         </div>
       );
     }
@@ -45,5 +56,12 @@ export default function ThemeSwitchIcon() {
     console.log(document.documentElement.classList.add('dark'));
   }
 
-  return <div className="absolute top-0">{renderThemeChanger()}</div>;
+  return (
+    <>
+      <div className="  p-1 grid grid-flow-col gap-2 cursor-pointer" onClick={()=>switchTheme()}>
+        <div className="my-auto">{renderThemeChanger()}</div>{' '}
+        <div className="lg:hidden my-auto">Theme</div>
+      </div>
+    </>
+  );
 }

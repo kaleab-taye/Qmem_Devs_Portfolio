@@ -23,7 +23,7 @@ module.exports = {
         background3Dark:'#282828',
         textColor1Dark: '#FFFFFF',
         textColor2Dark: '#D5D5D5',
-        textColor3Dark: '#F5F5F5',
+        textColor3Dark: '#333333',
         accentColorDark: '#007ced',
       },
       fontFamily: {

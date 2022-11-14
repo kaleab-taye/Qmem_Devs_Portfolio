@@ -1,4 +1,12 @@
 /* Make clicks pass-through */
+
+@media (prefers-color-scheme: dark) {
+  #nprogress {
+    --primary-color: #14ed00; 
+    pointer-events: none;
+  }
+}
+
 #nprogress {
     --primary-color: #007ced; 
     pointer-events: none;

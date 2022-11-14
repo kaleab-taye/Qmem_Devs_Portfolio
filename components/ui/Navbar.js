@@ -11,9 +11,9 @@ import ThemeSwitchIcon from './ThemeSwitchIcon';
 
 export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
-  const activeClass = ' py-3 px-2 opacity-100 font-bold';
+  const activeClass = ' py-3 px-2 opacity-90 text-textColor1 font-bold';
   const inactiveClass =
-    'font-medium py-3 px-2 opacity-60 hover:opacity-100 cursor-pointer ';
+    'font-medium py-3 px-2 opacity-70 text-textColor2 hover:opacity-100 cursor-pointer ';
 
   const pages = [
     { id: 'home', name: 'Home', path: '/', class: '' },
@@ -43,11 +43,7 @@ export default function Navbar({ page }) {
         </div>
       </div>
       {/* logo and name start */}
-      {/* theme switch start */}
-      <div className="my-auto ml-auto">
-        <ThemeSwitchIcon />
-      </div>
-      {/* theme switch end */}
+
       <div className="text-sm hidden lg:grid grid-flow-col ml-auto gap-6 xl:gap-12 my-auto text-textColor3 dark:text-textColor3Dark ">
         {pages.map((item) => (
           <Link href={item.path} key={item.id}>
@@ -67,7 +63,13 @@ export default function Navbar({ page }) {
           <div className="hireAnim1 z-0 shadow-[0px_0px_8px_0.25px_magenta] shadow-magenta absolute rounded-xl bg-gree w-full h-full"></div>
           <div className="hireAnim2 z-0 shadow-[0px_0px_8px_0.25px_textColor1] dark:shadow-[0px_0px_8px_0.25px_textColor1Dark] shadow-accentColor dark:shadow-accentColorDark absolute rounded-xl bg-gree w-full h-full"></div>
         </div>
+        {/* theme switch start */}
+        <div className="my-auto ml-auto">
+          <ThemeSwitchIcon />
+        </div>
+        {/* theme switch end */}
       </div>
+      {/* menu start */}
       <div
         className="block lg:hidden ml-auto my-auto cursor-pointer"
         onClick={() => setDrawerState(true)}
@@ -77,6 +79,7 @@ export default function Navbar({ page }) {
           icon={faBars}
         />
       </div>
+      {/* menu drawer start */}
       <Drawer
         anchor={'right'}
         open={drawerState}
@@ -104,9 +107,21 @@ export default function Navbar({ page }) {
                 </div>
               </Link>
             ))}
+            {/* theme switch start */}
+            <div
+              className={
+                inactiveClass +
+                ' ' +
+                'mr-auto grid grid-flow-col gap-2 w-fit group'
+              }
+            >
+              <ThemeSwitchIcon />
+            </div>
+            {/* theme switch end */}
           </div>
         </Box>
       </Drawer>
+      {/* menu end */}
     </div>
   );
 }
