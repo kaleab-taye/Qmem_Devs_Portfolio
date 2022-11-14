@@ -1,14 +1,6 @@
 /* Make clicks pass-through */
 
-@media (prefers-color-scheme: dark) {
-  #nprogress {
-    --primary-color: #14ed00; 
-    pointer-events: none;
-  }
-}
-
 #nprogress {
-    --primary-color: #007ced; 
     pointer-events: none;
   }
   #nprogress .bar {
@@ -18,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px; 
+    height: 3px; 
   }
   /* Fancy blur effect */
   #nprogress .peg {

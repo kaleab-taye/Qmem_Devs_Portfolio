@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <div className="my-auto grid grid-flow-row gap-5">
               <div className="grid gap-1">
-                <div className="text-textColor3 dark:text-textColor3Dark opacity-60 mb-5">
+                <div className="text-textColor1 dark:text-textColor1Dark opacity-50 mb-5">
                   <div className="b1 absolute">Frontend Web</div>{' '}
                   <div className="b2 absolute">Backend Api</div>{' '}
                   <div className="b3 absolute">Mobile App</div>

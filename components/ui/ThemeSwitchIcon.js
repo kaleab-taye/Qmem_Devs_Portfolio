@@ -4,20 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 export default function ThemeSwitchIcon() {
-  const { systemTheme, theme, setTheme } = useTheme('light');
+  const [initTheme,setInitTheme] = useState('light')
+  const { systemTheme, theme, setTheme } = useTheme(initTheme);
   const [mounted, setMounted] = useState(false);
 
-  function switchTheme (){
-    console.log('switch')
-    if(theme === 'light'){
-      setTheme('dark')
-    }else{
-      setTheme('light')
-
+  async function switchTheme() {
+    if (theme === 'light') {
+      setTheme('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      setTheme(() => 'light');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   }
 
   useEffect(() => {
+    document.documentElement.setAttribute('data-theme', initTheme);
     setMounted(true);
   }, []);
   const renderThemeChanger = () => {
@@ -28,7 +30,7 @@ export default function ThemeSwitchIcon() {
     if (currentTheme === 'dark') {
       return (
         <div
-          className=" text-textColor1Dark mr-auto grid w-fit "
+          className=" text-textColor1Dark mr-auto grid w-fit  "
           role="button"
           // onClick={() => setTheme('light')}
         >
@@ -58,7 +60,10 @@ export default function ThemeSwitchIcon() {
 
   return (
     <>
-      <div className="  p-1 grid grid-flow-col gap-2 cursor-pointer" onClick={()=>switchTheme()}>
+      <div
+        className="opacity-60 hover:opacity-100  p-1 grid grid-flow-col gap-2 cursor-pointer"
+        onClick={() => switchTheme()}
+      >
         <div className="my-auto">{renderThemeChanger()}</div>{' '}
         <div className="lg:hidden my-auto">Theme</div>
       </div>

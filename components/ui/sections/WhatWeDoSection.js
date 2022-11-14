@@ -34,7 +34,7 @@ export default function WhatWeDoSection() {
           </WhatWeDoCard>
           <WhatWeDoCard
             title="Backend Api"
-            description="Designing and developing fully functional, well documented and secure api for  API . Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex."
+            description="If you want to strengthen your application landscape with higher-quality backend solutions, We provide a complete range of backend development services, from building custom backend layers to enabling cloud integration to help enterprises lead in the digital age."
           >
             <Image className="" src={backendIcon} alt="seo icon" />
           </WhatWeDoCard>

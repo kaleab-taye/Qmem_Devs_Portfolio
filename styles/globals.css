@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #007ced;
+}
+html[data-theme='light'] {
+  --primary-color: #1ced00;
+  /* --primary-color: #54ca95; */
+  --background1 : rgb(207, 207, 207);
+  --background2 : rgb(126, 125, 125);
+}
+
+html[data-theme='dark'] {
+  --primary-color: #007ced;
+
+  --background1 : #222222;
+  --background2 : #444444;
+}
 
 /* changing text animation starts */
 .b1{opacity: 0;
@@ -44,49 +60,11 @@
   .s2{opacity: 0;
     animation: sty2 10s infinite;}
     @keyframes sty1{
-
-      /* 0%{opacity: 0;}
-      10%{opacity: 0.2;}
-      20%{opacity: 0.4;}
-      30%{opacity: 0.6;}
-      40%{opacity: 0.8;}
-      50%{opacity: 1;}
-      60%{opacity: 0.8;}
-      70%{opacity: 0.6;}
-      80%{opacity: 0.4;}
-      90%{opacity: 0.2;}
-      100%{opacity: 0;} */
-
-
-      /* 0%{opacity: 0.2;}
-      10%{opacity: 0.25;}
-      15%{opacity: 0.75;}
-      25%{opacity: 1;}
-      50%{opacity: 0.75;} */
-
       0%{opacity: 0.2;}
       50%{opacity: 0.8;}
       100%{opacity: 0.2;}
 
     }@keyframes sty2{
-      /* 0%{opacity: 1;}
-      10%{opacity: 0.8;}
-      20%{opacity: 0.6;}
-      30%{opacity: 0.4;}
-      40%{opacity: 0.2;}
-      50%{opacity: 0;}
-      60%{opacity: 0.2;}
-      70%{opacity: 0.4;}
-      80%{opacity: 0.6;}
-      90%{opacity: 0.8;}
-      100%{opacity: 1;} */
-
-      /* 50%{opacity: 0.2;}
-      60%{opacity: 0.25;}
-      70%{opacity: 0.5;}
-      75%{opacity: 1;}
-      100%{opacity: 0.75;} */
-
       0%{opacity: 0.8;}
       50%{opacity: 0.2;}
       100%{opacity: 0.8;}
@@ -146,35 +124,6 @@ a {
   box-sizing: border-box;
 } */
 
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar {
-    width: 8px;
-    /* padding: 23; */
-    height:8px;
-    /* border-radius: 10px; */
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #3a3737;
-    box-shadow: inset 0 0 10px #222222;
-    /* border-radius: 10px; */
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #444444;
-    border-radius: 12px;
-  }
-
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
 
 /* scroll bar edit start */
 
@@ -188,15 +137,15 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #222222;
-  box-shadow: inset 0 0 10px #222222;
+  background: var(--background1);
+  /* box-shadow: inset 0 0 10px var(--background1); */
   /* border-radius: 10px; */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #444444;
-  border-radius: 12px;
+  background: var(--background2);
+  border-radius: 3px;
 }
 
 /* scroll bar edit end */

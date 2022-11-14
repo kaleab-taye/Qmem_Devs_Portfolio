@@ -11,9 +11,9 @@ import ThemeSwitchIcon from './ThemeSwitchIcon';
 
 export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
-  const activeClass = ' py-3 px-2 opacity-90 text-textColor1 font-bold';
+  const activeClass = ' py-3 px-2 opacity-90 text-textColor1 dark:text-textColor1Dark font-bold';
   const inactiveClass =
-    'font-medium py-3 px-2 opacity-70 text-textColor2 hover:opacity-100 cursor-pointer ';
+    'font-medium py-3 px-2 opacity-70 text-textColor2 dark:text-textColor2Dark hover:opacity-100 cursor-pointer font-medium ';
 
   const pages = [
     { id: 'home', name: 'Home', path: '/', class: '' },
