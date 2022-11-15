@@ -1,5 +1,5 @@
-import PartialUnderline from './PartialUnderline';
-import TimelineElement from './TimelineElement';
+import PartialUnderline from '../PartialUnderline';
+import TimelineElement from '../TimelineElement';
 
 export default function TimelineDisplay({ timelines, heading }) {
   return (

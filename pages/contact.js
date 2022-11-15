@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <BodyLayout page="contact">
       <PageHeading heading="Contact" subHeading="Get in Touch" />
-      <div className="max-w-maxContentWid mx-10 2xl:mx-auto my-10  grid grid-flow-row">
+      <div className="max-w-maxContentWid mx-2 lg:mx-10 2xl:mx-auto my-10  grid grid-flow-row">
         {/* map display start */}
         <div className="my-10">
           <Placeholder isLoading={iframeLoading}>
@@ -41,8 +41,8 @@ export default function Contact() {
         </div>
         {/* map display end */}
 
-        <div className="text-textColor1 dark:text-textColor1Dark grid grid-flow-row sm:grid-cols-3 gap-8">
-          <div className="grid grid-flow-row mb-auto gap-8">
+        <div className="text-textColor1 dark:text-textColor1Dark grid grid-flow-row sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-flow-row mb-auto gap-8 ">
             <ContactCardItem
               icon={faPhone}
               text="+251979036773"
@@ -59,12 +59,12 @@ export default function Contact() {
               description="Send us an email with a brief description of your case and our team will get back to you in no time"
             />
           </div>
-          <div className="grid grid-flow-row gap-8 sm:col-span-2">
+          <div className="grid grid-flow-row gap-8 lg:col-span-2 ">
             <div>
               <PartialUnderline text="How Can We Help You?" />
             </div>
             <div className="grid grid-flow-row gap-6">
-              <div className="grid grid-flow-row md:grid-cols-2 gap-4">
+              <div className="grid grid-flow-row lg:grid-cols-2 gap-4">
                 <div className="grid grid-flow-row gap-6">
                   <input
                     placeholder="Full Name"
@@ -87,7 +87,7 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              <div className="mr-auto">
+              <div className=" text-center sm:text-left">
                 <Button placeholder={'Send message'} />
               </div>
             </div>

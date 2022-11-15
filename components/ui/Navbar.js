@@ -25,7 +25,7 @@ export default function Navbar({ page }) {
   ];
 
   return (
-    <div className=" grid grid-flow-col lg:mx-10 mx-5 py-2 lg:py-6 ">
+    <div className=" grid grid-flow-col lg:mx-10 mx-2 py-2 lg:py-6 ">
       {/* logo and name start */}
       <div className=" text-textColor1 dark:text-textColor1Dark mr-auto my-auto text-xl grid grid-flow-col my-auto">
         <Link href="/">

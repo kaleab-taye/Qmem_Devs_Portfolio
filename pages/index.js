@@ -35,11 +35,11 @@ import WhatWeDoSection from '../components/ui/sections/WhatWeDoSection';
 export default function Home() {
   return (
     <BodyLayout page="home">
-      <div className="max-w-maxContentWid   mx-10 2xl:mx-auto  my-auto">
+      <div className="max-w-maxContentWid mx-3 lg:mx-10 2xl:mx-auto  my-auto">
         <div className="m-auto max-w-maxContentWid">
           {/* landing section start */}
-          <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-28">
-            <div className="grid m-auto max-w-[350px]  rounded-full inline-flex">
+          <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-8 lg:my-28 ">
+            <div className="grid m-auto max-w-[350px] mx-2 rounded-full inline-flex">
               <div className="relative grid m-auto box-content">
                 {/* changing shadow design start */}
                 <div className="s1 rounded-full shadow-[-3px_-3px_10px_2px_textColor1] dark:shadow-[-3px_-3px_10px_2px_textColor1Dark] shadow-textColor1 dark:shadow-textColor1Dark    absolute w-full h-fill top-0  -inset-0.5"></div>
@@ -80,7 +80,7 @@ export default function Home() {
                 <Link className="" href="/contact">
                   <Button
                     placeholder={'Contact Us'}
-                    hover="hover:bg-textColor3 dark:hover:bg-textColor3Dark hover:text-background1 dark:hover:text-background1Dark "
+                    hover="hover:bg-textColor3 dark:hover:bg-textColor3Dark hover:text-background1  "
                     ring="ring-textColor3 dark:ring-textColor3Dark"
                   />
                 </Link>

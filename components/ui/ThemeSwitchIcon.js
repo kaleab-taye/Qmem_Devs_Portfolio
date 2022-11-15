@@ -13,13 +13,13 @@ export default function ThemeSwitchIcon() {
       setTheme('dark');
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-      setTheme(() => 'light');
+      setTheme( 'light');
       document.documentElement.setAttribute('data-theme', 'light');
     }
   }
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', initTheme);
+    document.documentElement.setAttribute('data-theme', theme);
     setMounted(true);
   }, []);
   const renderThemeChanger = () => {

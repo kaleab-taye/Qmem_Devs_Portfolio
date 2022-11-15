@@ -64,7 +64,7 @@ export default function ShowcaseOverlay({
               },
             }}
           >
-            <div className="fixed z-40   bg-background1 dark:bg-background1Dark w-full h-full  top-0 left-0 grid">
+            <div className="fixed z-40 overflow-clip  bg-background1 dark:bg-background1Dark w-full h-full  top-0 left-0 grid">
               <div className=" max-w-maxHeroWid mx-10 2xl:mx-auto my-5  grid grid-flow-row gap-5 mb-auto">
                 {/* close icon start */}
                 <div
@@ -79,7 +79,7 @@ export default function ShowcaseOverlay({
                 {/* close icon end */}
 
                 <div className="grid grid-flow-row md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10">
-                  <div className="col-span-2">
+                  <div className="col-span-2 grid overflow-scroll">
                     <div className="font-bold text-[32px]">
                       Shuk-Shukta Blogs
                     </div>
@@ -116,9 +116,45 @@ export default function ShowcaseOverlay({
                       </div>
                     </div>
                     {/* scrolling image canvas end */}
+                    <div>
+                      Pellentesque tristique viverra augue vitae faucibus. Orci
+                      varius natoque penatibus et magnis dis parturient montes,
+                      nascetur ridiculus mus. Maecenas aliquet massa ac lectus
+                      tristique convallis. Nam auctor vitae ipsum id dignissim.
+                      Nam nec felis neque. Donec efficitur egestas lacus, et
+                      pretium libero aliquam vel. Sed dolor diam, dictum eget
+                      consectetur vel, malesuada non lorem. Integer tristique
+                      mattis mauris, sit amet imperdiet nisi lacinia ac. Fusce
+                      et dictum leo. Mauris efficitur volutpat libero, at tempus
+                      nisi pulvinar sed.
+                    </div>{' '}
+                    <div>
+                      Pellentesque tristique viverra augue vitae faucibus. Orci
+                      varius natoque penatibus et magnis dis parturient montes,
+                      nascetur ridiculus mus. Maecenas aliquet massa ac lectus
+                      tristique convallis. Nam auctor vitae ipsum id dignissim.
+                      Nam nec felis neque. Donec efficitur egestas lacus, et
+                      pretium libero aliquam vel. Sed dolor diam, dictum eget
+                      consectetur vel, malesuada non lorem. Integer tristique
+                      mattis mauris, sit amet imperdiet nisi lacinia ac. Fusce
+                      et dictum leo. Mauris efficitur volutpat libero, at tempus
+                      nisi pulvinar sed.
+                    </div>{' '}
+                    <div>
+                      Pellentesque tristique viverra augue vitae faucibus. Orci
+                      varius natoque penatibus et magnis dis parturient montes,
+                      nascetur ridiculus mus. Maecenas aliquet massa ac lectus
+                      tristique convallis. Nam auctor vitae ipsum id dignissim.
+                      Nam nec felis neque. Donec efficitur egestas lacus, et
+                      pretium libero aliquam vel. Sed dolor diam, dictum eget
+                      consectetur vel, malesuada non lorem. Integer tristique
+                      mattis mauris, sit amet imperdiet nisi lacinia ac. Fusce
+                      et dictum leo. Mauris efficitur volutpat libero, at tempus
+                      nisi pulvinar sed.
+                    </div>
                   </div>
                   {/* information box start */}
-                  <div className="border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
+                  <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
                     {/* description start */}
                     <div className="grid gap-3 overflow-hidden">
                       <div className="font-bold text-[18px]">Description</div>

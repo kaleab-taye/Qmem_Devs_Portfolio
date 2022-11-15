@@ -1,7 +1,7 @@
 import BodyLayout from '../components/ui/BodyLayout';
 import PageHeading from '../components/ui/PageHeading';
-import ProgressDisplay from '../components/ui/ProgressDisplay';
-import TimelineDisplay from '../components/ui/TimelineDisplay';
+import ProgressDisplay from '../components/ui/sections/ProgressDisplay';
+import TimelineDisplay from '../components/ui/sections/TimelineDisplay';
 
 export default function resume() {
   return (
@@ -10,9 +10,9 @@ export default function resume() {
       <PageHeading heading="Resume" subHeading="8 Years of Experience" />
       {/* current page desc section end*/}
 
-      <div className="max-w-maxContentWid mx-10 2xl:mx-auto my-16 ">
+      <div className="max-w-maxContentWid  mx-3 lg:mx-10 2xl:mx-auto my-16 ">
         {/* timeline section start */}
-        <div className="grid grid-flow-row sm:grid-flow-col mb-10">
+        <div className="mx-2 grid grid-flow-row sm:grid-flow-col mb-10">
           <TimelineDisplay
             heading="Experience"
             timelines={[
@@ -55,7 +55,7 @@ export default function resume() {
         </div>
         {/* timeline section end */}
         {/* skills section start */}
-        <div className="grid grid-flow-col gap-8">
+        <div className="grid grid-flow-row sm:grid-flow-col gap-8">
           <ProgressDisplay
             heading="Coding Proficiency"
             items={[

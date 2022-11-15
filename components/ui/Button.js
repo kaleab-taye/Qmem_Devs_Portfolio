@@ -29,6 +29,6 @@ export default function Button({
 
 Button.defaultProps = {
   hover: 'hover:bg-accentColor dark:hover:bg-accentColorDark',
-  color: 'text-textColor1 dark:text-textColor1Dark',
+  color: 'text-textColor1 dark:text-textColor1Dark hover:text-background1 dark:hover:background1Dark',
   ring: 'ring-accentColor dark:ring-accentColorDark',
 };

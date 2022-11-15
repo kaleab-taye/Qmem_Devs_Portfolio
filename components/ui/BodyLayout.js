@@ -10,7 +10,7 @@ export default function BodyLayout({ children, page }) {
   const router = useRouter();
   return (
     <div className="min-h-screen grid grid-flow-row  ">
-      <div className=" gap-0 grid grid-flow-row mb-auto  gap-2">
+      <div className=" gap-0 grid grid-flow-row gap-0 ">
         {/* nav bar */}
         <Navbar page={page} />
         {/* animate on page change */}

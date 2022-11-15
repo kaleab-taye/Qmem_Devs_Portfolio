@@ -41,7 +41,7 @@ export default function TestimonialSection() {
             setPageNumber(index);
           }}
           style={{ transition: '2.15s ease' }}
-          enableMouseEvents
+          enableMouseEvents={true}
           className="duration-1000"
           slideClassName=" transition-all ease-in-out duration-1000"
         >

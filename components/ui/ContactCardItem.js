@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function ContactCardItem({ icon, text, description }) {
   return (
-    <div className=' w-full grid'>
-      <div className="grid grid-flow-col mr-auto gap-4">
+    <div className='w-[100%]  grid   '>
+      <div className="grid grid-flow-col mr-auto gap-4 h-fit ">
         <div className="text-accentColor dark:text-accentColorDark mr-auto mt-2 ">
           <FontAwesomeIcon className="w-[23px] h-[23px] m-auto" icon={icon} />
         </div>
