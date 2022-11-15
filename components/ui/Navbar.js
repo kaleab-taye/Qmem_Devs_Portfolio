@@ -8,9 +8,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import logoImage from '../../public/Logo.png';
 import ThemeSwitchIcon from './ThemeSwitchIcon';
+import { Quicksand } from '@next/font/google'
+
+  const quicksand = Quicksand()
 
 export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
+  
   const activeClass = ' py-3 px-2 opacity-90 text-textColor1 dark:text-textColor1Dark font-bold';
   const inactiveClass =
     'font-medium py-3 px-2 opacity-70 text-textColor2 dark:text-textColor2Dark hover:opacity-100 cursor-pointer font-medium ';
@@ -31,10 +35,10 @@ export default function Navbar({ page }) {
         <Link href="/">
           <Image className="w-14 rounded-full" src={logoImage} alt="logo" />
         </Link>
-        <div className="my-auto ml-2 font-medium  ">
+        <div className={`my-auto ml-2 font-medium `+' '+quicksand.className}>
           <Link href="/">
             <span>
-              <span className="font-bold drop-shadow-xl drop-shadow-accentColor dark:drop-shadow-accentColorDark">
+              <span className={`font-bold drop-shadow-xl drop-shadow-accentColor dark:drop-shadow-accentColorDark` }>
                 Qmem
               </span>{' '}
               Developers

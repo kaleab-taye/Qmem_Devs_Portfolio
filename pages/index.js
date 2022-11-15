@@ -31,7 +31,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { faAndroid } from '@fortawesome/free-brands-svg-icons';
 import WhatWeDoSection from '../components/ui/sections/WhatWeDoSection';
+import { Quicksand } from '@next/font/google';
 
+const quicksand = Quicksand({subsets : ['latin']});
 export default function Home() {
   return (
     <BodyLayout page="home">
@@ -65,7 +67,13 @@ export default function Home() {
                   <div className="b4 absolute">Ui / Ux design</div>
                   <div className="b5 absolute">Website</div>
                 </div>
-                <div className="text-textColor1 dark:text-textColor1Dark text-5xl font-bold">
+                <div
+                  className={
+                    `text-textColor1 dark:text-textColor1Dark text-5xl font-bold` +
+                    ' ' +
+                    quicksand.className
+                  }
+                >
                   Qmem Developers
                 </div>
               </div>
