@@ -35,7 +35,7 @@ export default function BodyLayout({ children, page }) {
         </div>
         {/* </motion.div> */}
       </div>
-      <FooterSection className="  mx-10 " />
+      <FooterSection className="" />
     </div>
   );
 }
