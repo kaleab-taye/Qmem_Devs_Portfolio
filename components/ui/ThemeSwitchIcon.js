@@ -4,26 +4,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 export default function ThemeSwitchIcon() {
-  const [initTheme,setInitTheme] = useState('dark')
+  const [themeDesc, setThemeDesc] = useState('');
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  async function switchTheme() {
-    if (theme === 'light') {
+  function switchTheme() {
+    if (theme === 'system' && systemTheme === 'light') {
+      setTheme('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else if (theme === 'system' && systemTheme === 'dark') {
+      setTheme('light');
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (theme === 'light') {
       setTheme('dark');
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-      setTheme( 'light');
+      setTheme('light');
       document.documentElement.setAttribute('data-theme', 'light');
     }
   }
-
+  // set the theme name display for switch
+  useEffect(() => {
+    if (theme === 'light') {
+      setThemeDesc('Dark');
+    } else if (theme === 'dark') {
+      setThemeDesc('Light');
+    } else {
+      setThemeDesc('');
+    }
+  }, [theme]);
+  // set the html theme on initial load
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     setMounted(true);
   }, []);
-  const renderThemeChanger = () => {
-    if (!mounted) return null;
+  let renderThemeChanger = () => {
+    console.log('start');
+    if (!mounted) return;
+    console.log('end');
 
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
@@ -50,14 +68,6 @@ export default function ThemeSwitchIcon() {
     }
   };
 
-  function handleClick(item) {
-    console.log(item);
-    localStorage.theme = item;
-    document.documentElement.classList.add('dark');
-
-    console.log(document.documentElement.classList.add('dark'));
-  }
-
   return (
     <>
       <div
@@ -65,7 +75,7 @@ export default function ThemeSwitchIcon() {
         onClick={() => switchTheme()}
       >
         <div className="my-auto">{renderThemeChanger()}</div>{' '}
-        <div className="lg:hidden my-auto">{theme==='light'?'Dark ':'Light '}Theme</div>
+        <div className="lg:hidden my-auto">{themeDesc} Theme</div>
       </div>
     </>
   );
