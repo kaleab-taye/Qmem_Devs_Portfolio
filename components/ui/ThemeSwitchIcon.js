@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 export default function ThemeSwitchIcon() {
-  const [initTheme,setInitTheme] = useState('light')
-  const { systemTheme, theme, setTheme } = useTheme(initTheme);
+  const [initTheme,setInitTheme] = useState('dark')
+  const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   async function switchTheme() {
