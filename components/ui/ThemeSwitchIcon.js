@@ -65,7 +65,7 @@ export default function ThemeSwitchIcon() {
         onClick={() => switchTheme()}
       >
         <div className="my-auto">{renderThemeChanger()}</div>{' '}
-        <div className="lg:hidden my-auto">Theme</div>
+        <div className="lg:hidden my-auto">{theme==='light'?'Dark ':'Light '}Theme</div>
       </div>
     </>
   );
