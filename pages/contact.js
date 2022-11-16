@@ -76,7 +76,7 @@ export default function Contact() {
   return (
     <BodyLayout page="contact">
       <PageHeading heading="Contact" subHeading="Get in Touch" />
-      <div className="max-w-maxContentWid mx-5 sm:mx-8 lg:mx-10 2xl:mx-auto my-10  grid grid-flow-row">
+      <div className="max-w-maxContentWid mx-4 sm:mx-8 lg:mx-10 2xl:mx-auto my-10  grid grid-flow-row">
         {/* map display start */}
         <div className="my-10">
           <Placeholder isLoading={iframeLoading}>

@@ -37,7 +37,7 @@ const quicksand = Quicksand({subsets : ['latin']});
 export default function Home() {
   return (
     <BodyLayout page="home">
-      <div className="max-w-maxContentWid grid mx-5 sm:mx-8 lg:mx-10 2xl:mx-auto  my-auto">
+      <div className="max-w-maxContentWid grid mx-4 sm:mx-8 lg:mx-10 2xl:mx-auto  my-auto">
         <div className="m-auto max-w-maxContentWid ">
           {/* landing section start */}
           <div className="grid grid-flow-row md:grid-flow-col gap-14 m-auto max-w-maxHeroWid my-8 lg:my-28 ">
