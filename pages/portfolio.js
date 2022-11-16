@@ -14,7 +14,7 @@ export default function Portfolio() {
       {/* current page desc section start*/}
       <PageHeading heading="Portfolio" subHeading="" />
       {/* current page desc section end*/}
-      <div className="grid grid-flow-row mb-20  mx-3 lg:mx-10 2xl:mx-auto max-w-maxContentWid">
+      <div className="grid grid-flow-row mb-20  mx-5 sm:mx-8 lg:mx-10 2xl:mx-auto max-w-maxContentWid">
         <div className="  2xl:mx-auto my-10  grid grid-flow-row">
           {/* option display start */}
           <div className="my-10 text-center grid sm:grid-flow-col sm:ml-auto  gap-2 lg:gap-5  text-textColor1 dark:text-textColor1Dark text-xs">

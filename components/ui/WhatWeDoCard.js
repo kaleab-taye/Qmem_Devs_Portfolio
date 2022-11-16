@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function WhatWeDoCard({ title, description, icon, children }) {
   return (
     <div className="grid group relative">
-      <div className="  cursor-pointer grid grid-cols-3 gap-2 my-auto ">
+      <div className="   grid grid-cols-3 gap-2 my-auto ">
         <div className=" text-accentColor dark:text-accentColorDark grid m-auto grid min-w-[120px]">
           {children}
         </div>
@@ -19,7 +19,7 @@ export default function WhatWeDoCard({ title, description, icon, children }) {
           </div>
         </div>
       </div>
-      <div className="absolute hidden shadow-xl group-hover:block bottom-0 right-0">
+     {/*  <div className="absolute hidden shadow-xl group-hover:block bottom-0 right-0">
         <div className="grid h-[100%] gap-1 grid-flow-col">
           <div className="my-auto opacity-90 text-sm">Read more</div>{' '}
           <FontAwesomeIcon
@@ -27,7 +27,7 @@ export default function WhatWeDoCard({ title, description, icon, children }) {
             icon={faArrowRight}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

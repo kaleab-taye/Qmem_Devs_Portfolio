@@ -10,7 +10,7 @@ export default function resume() {
       <PageHeading heading="Resume" subHeading="8 Years of Experience" />
       {/* current page desc section end*/}
 
-      <div className="max-w-maxContentWid  mx-3 lg:mx-10 2xl:mx-auto my-16 ">
+      <div className="max-w-maxContentWid  mx-5 sm:mx-8 lg:mx-10 2xl:mx-auto my-16 ">
         {/* timeline section start */}
         <div className="mx-2 grid grid-flow-row sm:grid-flow-col mb-10">
           <TimelineDisplay

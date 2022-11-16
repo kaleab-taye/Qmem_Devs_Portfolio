@@ -39,9 +39,7 @@ export default function ThemeSwitchIcon() {
     setMounted(true);
   }, []);
   let renderThemeChanger = () => {
-    console.log('start');
     if (!mounted) return;
-    console.log('end');
 
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
