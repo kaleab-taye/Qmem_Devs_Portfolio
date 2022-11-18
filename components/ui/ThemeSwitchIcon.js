@@ -23,21 +23,33 @@ export default function ThemeSwitchIcon() {
       document.documentElement.setAttribute('data-theme', 'light');
     }
   }
-  // set the theme name display for switch
+
   useEffect(() => {
+    // set the html theme on initial load
+    if (theme === 'system') {
+      console.log('syst theme', systemTheme);
+      document.documentElement.setAttribute('data-theme', systemTheme);
+    } else {
+      console.log('theme', systemTheme);
+
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    // set the theme name display for switch
     if (theme === 'light') {
       setThemeDesc('Dark');
     } else if (theme === 'dark') {
       setThemeDesc('Light');
+    } else if (theme === 'system') {
+      if (theme === 'light') {
+        setThemeDesc('Dark');
+      } else if (theme === 'dark') {
+        setThemeDesc('Light');
+      }
     } else {
       setThemeDesc('');
     }
-  }, [theme]);
-  // set the html theme on initial load
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
     setMounted(true);
-  }, []);
+  }, [systemTheme, theme]);
   let renderThemeChanger = () => {
     if (!mounted) return;
 
