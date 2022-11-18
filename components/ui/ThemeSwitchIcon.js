@@ -40,9 +40,9 @@ export default function ThemeSwitchIcon() {
     } else if (theme === 'dark') {
       setThemeDesc('Light');
     } else if (theme === 'system') {
-      if (theme === 'light') {
+      if (systemTheme === 'light') {
         setThemeDesc('Dark');
-      } else if (theme === 'dark') {
+      } else if (systemTheme === 'dark') {
         setThemeDesc('Light');
       }
     } else {
