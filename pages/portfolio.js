@@ -8,7 +8,9 @@ import ShowcaseDisplay from '../components/ui/sections/ShowcaseDisplay';
 import { useState } from 'react';
 
 export default function Portfolio() {
+  const categoryEnum = {all:'all', webapp : 'Web App', mobileApp:'Mobile App', ui_ux_design:'UI/UX Design', fullStack : 'Fullstack', website:'Website'}
   const [category, setCategory] = useState('all');
+
   return (
     <BodyLayout page="portfolio">
       {/* current page desc section start*/}
@@ -21,9 +23,9 @@ export default function Portfolio() {
             <div className='grid grid-cols-3 sm:grid-flow-col gap-2 lg:gap-5 '>
               <div
                 className="cursor-pointer "
-                onClick={() => setCategory('all')}
+                onClick={() => setCategory(categoryEnum.all)}
               >
-                {category === 'all' ? (
+                {category === categoryEnum.all ? (
                   <div className="opacity-100">All</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">All</div>
@@ -31,10 +33,10 @@ export default function Portfolio() {
               </div>
               <div
                 className="cursor-pointer hover:opacity-100 "
-                onClick={() => setCategory('mobileApp')}
+                onClick={() => setCategory(categoryEnum.mobileApp)}
               >
                 {' '}
-                {category === 'mobileApp' ? (
+                {category === categoryEnum.mobileApp ? (
                   <div className="opacity-100">Mobile App</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">Mobile App</div>
@@ -42,10 +44,10 @@ export default function Portfolio() {
               </div>
               <div
                 className="cursor-pointer hover:opacity-100 "
-                onClick={() => setCategory('webApp')}
+                onClick={() => setCategory(categoryEnum.webapp)}
               >
                 {' '}
-                {category === 'webApp' ? (
+                {category === categoryEnum.webapp ? (
                   <div className="opacity-100">Web App</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">Web App</div>
@@ -55,10 +57,10 @@ export default function Portfolio() {
             <div className='grid grid-cols-3 sm:grid-flow-col gap-2 lg:gap-5 '>
               <div
                 className="cursor-pointer hover:opacity-100 "
-                onClick={() => setCategory('ui/ux')}
+                onClick={() => setCategory(categoryEnum.ui_ux_design)}
               >
                 {' '}
-                {category === 'ui/ux' ? (
+                {category === categoryEnum.ui_ux_design ? (
                   <div className="opacity-100">UI/UX Design</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">
@@ -68,10 +70,10 @@ export default function Portfolio() {
               </div>
               <div
                 className="cursor-pointer hover:opacity-100 "
-                onClick={() => setCategory('fullstack')}
+                onClick={() => setCategory(categoryEnum.fullStack)}
               >
                 {' '}
-                {category === 'fullstack' ? (
+                {category === categoryEnum.fullStack ? (
                   <div className="opacity-100">Fullstack</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">Fullstack</div>
@@ -79,10 +81,10 @@ export default function Portfolio() {
               </div>
               <div
                 className="cursor-pointer hover:opacity-100"
-                onClick={() => setCategory('website')}
+                onClick={() => setCategory(categoryEnum.website)}
               >
                 {' '}
-                {category === 'website' ? (
+                {category === categoryEnum.website ? (
                   <div className="opacity-100">Website</div>
                 ) : (
                   <div className="opacity-50 hover:opacity-100">Website</div>
@@ -93,7 +95,7 @@ export default function Portfolio() {
           {/* option display end */}
           {/* portfolio display start */}
           <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-            <ShowcaseDisplay category={category} />
+            <ShowcaseDisplay category={category} categoryEnum={categoryEnum} />
           </div>
           {/* portfolio display start */}
         </div>

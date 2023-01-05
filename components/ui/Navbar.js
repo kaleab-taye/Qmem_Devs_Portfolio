@@ -8,22 +8,23 @@ import Link from 'next/link';
 import { useState } from 'react';
 import logoImage from '../../public/Logo.png';
 import ThemeSwitchIcon from './ThemeSwitchIcon';
-import { Quicksand } from '@next/font/google'
+import { Quicksand } from '@next/font/google';
 
-  const quicksand = Quicksand()
+const quicksand = Quicksand();
 
 export default function Navbar({ page }) {
   const [drawerState, setDrawerState] = useState(false);
-  
-  const activeClass = ' py-3 px-2 opacity-90 text-textColor1 dark:text-textColor1Dark font-bold';
+
+  const activeClass =
+    ' py-3 px-2 opacity-90 text-textColor1 dark:text-textColor1Dark font-bold';
   const inactiveClass =
     'font-medium py-3 px-2 opacity-70 text-textColor2 dark:text-textColor2Dark hover:opacity-100 cursor-pointer font-medium ';
 
   const pages = [
     { id: 'home', name: 'Home', path: '/', class: '' },
-    { id: 'resume', name: 'Resume', path: '/resume', class: '' },
+    // { id: 'resume', name: 'Resume', path: '/resume', class: '' },
     { id: 'portfolio', name: 'Portfolio', path: '/portfolio', class: '' },
-    { id: 'blogs', name: 'Blogs', path: '/blogs', class: '' },
+    // { id: 'blogs', name: 'Blogs', path: '/blogs', class: '' },
     { id: 'contact', name: 'Contact Us', path: '/contact', class: '' },
     // { id: 'hire', name: 'Hire Us', path: '/hire', class: '' },
   ];
@@ -31,14 +32,21 @@ export default function Navbar({ page }) {
   return (
     <div className=" grid grid-flow-col lg:mx-10 mx-2 py-2 lg:py-6 ">
       {/* logo and name start */}
-      <div className=" text-textColor1 dark:text-textColor1Dark mr-auto my-auto text-xl grid grid-flow-col my-auto">
+      <div className=" text-textColor1 dark:text-textColor1Dark mr-auto my-auto text-3xl grid grid-flow-col my-auto">
         <Link href="/">
-          <Image className="w-14 rounded-full" src={logoImage} alt="logo" />
+          <div className=''>
+
+          <Image className="w-14 rounded-full drop-shadow-xl border-2 border-textColor3 dark:border-textColor3 drop-shadow-xl " src={logoImage} alt="logo" />
+          </div>
         </Link>
-        <div className={`my-auto ml-2 font-medium `+' '+quicksand.className}>
+        <div
+          className={`my-auto ml-2 font-medium ` + ' ' + quicksand.className}
+        >
           <Link href="/">
             <span>
-              <span className={`font-bold drop-shadow-xl drop-shadow-accentColor dark:drop-shadow-accentColorDark` }>
+              <span
+                className={`font-bold drop-shadow-xl drop-shadow-accentColor dark:drop-shadow-accentColorDark`}
+              >
                 Qmem
               </span>{' '}
               Developers
