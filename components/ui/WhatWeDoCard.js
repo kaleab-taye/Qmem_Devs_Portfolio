@@ -16,12 +16,12 @@ export default function WhatWeDoCard({ title, description, icon, children, state
   return (
     <div className="grid group relative">
       <div className="   grid grid-cols-3 gap-2 my-auto ">
-        <div className="col-start-3 row-start-auto text-accentColor dark:text-accentColorDark grid m-auto grid min-w-[120px]">
+        <div className=" my-auto col-start-3 row-start-auto text-accentColor dark:text-accentColorDark grid m-auto grid min-w-[120px]">
           {children}
         </div>
         <div className="grid m-auto col-span-2 row-start-1 col-start-1 ">
           <div className="text-lg font-bold ">{title}</div>
-          <div className="text-sm text-textColor1 dark:text-textColor1Dark opacity-60">
+          <div className="text-sm text-textColor1 dark:text-textColor1Dark opacity-60 text-justify">
             {description}
           </div>
         </div>

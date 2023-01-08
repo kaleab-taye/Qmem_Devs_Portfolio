@@ -14,7 +14,7 @@ export default function TestimonialCard({ image, body, by, position }) {
         />
       </span>
       <span className="pr-[20px] pb-[20px] pl-[60px] pt-[30px] grid grid-flow-row gap-3">
-        <span className="opacity-80 text-[14px] italic">
+        <span className="opacity-80 text-[14px] italic ">
           Mauris neque libero, aliquet vel mollis nec, euismod sed tellus.
           Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae
           lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis

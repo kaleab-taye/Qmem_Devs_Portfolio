@@ -9,6 +9,11 @@ import angels_touch_002 from './../../../public/angels-touch/002.png';
 import angels_touch_003 from './../../../public/angels-touch/003.png';
 import angels_touch_004 from './../../../public/angels-touch/004.png';
 import angels_touch_005 from './../../../public/angels-touch/005.png';
+import cash_001 from './../../../public/cash/001.png';
+import cash_002 from './../../../public/cash/002.png';
+import cash_003 from './../../../public/cash/003.png';
+import cash_004 from './../../../public/cash/004.png';
+import cash_005 from './../../../public/cash/005.png';
 
 import { useEffect, useState } from 'react';
 import { display } from '@mui/system';
@@ -42,6 +47,20 @@ export default function ShowcaseDisplay({ category,categoryEnum }) {
       date : 'August 5 2022',
       link : 'https://angelstouchafh.com/',
       blog : "We designed this website to enable it's potential customers have an insight to their organization. we have tried to incorporate as much detail as possible about the services they provide with much consideration on the user interface and experience"
+      
+    },{
+      image: cash_001,
+      name: 'Cash Mart',
+      meta: 'Machine Import',
+      description: 'Payment affiliation system for machine importer company located in ethiopia',
+      category: [categoryEnum.webapp,categoryEnum.ui_ux_design,categoryEnum.mobileApp,categoryEnum.fullStack],
+      key: 'cash_123456',
+      otherImages: [cash_001,cash_002,cash_003,cash_004,cash_005],
+      technologies: ['Figma','Flutter', 'Node Js', 'Mongo DB'],
+      customer: 'Machine Importer Company',
+      date : 'Jan 8 2023',
+      link : 'https://cash.et/',
+      blog : "We developed this web app and android application for a furniture and metal works selling company to enable their customers buy the products online and enable their salesman sell the machines through this platform by signing in and receive their commission or payment. This web app also contains a brief explanation of what the company does and how you can use this platform. It also has an admin side web app where you can customize all the contents in the web app"
       
     }
    

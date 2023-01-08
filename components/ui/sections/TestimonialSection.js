@@ -31,7 +31,7 @@ useEffect(()=>{
   console.log('tt',theme.direction)
 },[theme.direction])
   return (
-    <div className="grid grid-flow-row gap-8 ">
+    <div className="grid grid-flow-row gap-3 sm:gap-8 ">
       <div>
         <PartialUnderline text="Testimonials" />
       </div>
@@ -51,7 +51,7 @@ useEffect(()=>{
             value={pageNumber}
             index={0}
             dir={theme.direction === 'rtl' ? 'x-reverse' : 'ltr' ? 'x' : 'x'}
-            className=" mx-auto"
+            className=" "
           >
             <span className="mx-auto grid grid-flow-row md:grid-flow-col  -m-6">
               <TestimonialCard by="Yonael Biniam" />
@@ -61,7 +61,7 @@ useEffect(()=>{
             value={pageNumber}
             index={1}
             dir={theme.direction === 'rtl' ? 'x-reverse' : 'ltr' ? 'x' : 'x'}
-            className=" mx-auto"
+            className=" "
           >
             <span className="mx-auto grid grid-flow-row md:grid-flow-col  -m-6">
               <TestimonialCard by="Yonael Biniam" />

@@ -1,14 +1,10 @@
 import {
-  faFacebook,
   faInstagram,
-  faInstagramSquare,
   faLinkedin,
   faSquareFacebook,
-  faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { faCalendarAlt, faUser } from '@fortawesome/free-regular-svg-icons';
 import {
-  faCalendar,
   faEarthAmericas,
   faGlobe,
   faXmark,
@@ -27,11 +23,10 @@ import {
 } from 'react-swipeable-views-utils';
 import TabPanel from '../TabPanel';
 
-import testImage from './../../public/axumWgrad.jpg';
-import testImage1 from './../../public/Logo.png';
 import TestimonialCard from './TestimonialCard';
 import CustomPagination from './CustomPagination';
 
+const EnhancedSwipeableViews = autoPlay(bindKeyboard(SwipeableViews));
 export default function ShowcaseOverlay({
   isOverlayOpen,
   setOverlayOpenState,
@@ -39,7 +34,6 @@ export default function ShowcaseOverlay({
   item,
 }) {
   const theme = useTheme();
-  const EnhancedSwipeableViews = autoPlay(bindKeyboard(SwipeableViews));
   const [autoScrollImageCanvasIndex, setAutoScrollImageCanvasIndex] =
     useState(0);
 
@@ -76,11 +70,11 @@ export default function ShowcaseOverlay({
         onClose={() => setOverlayOpenState(false)}
         PaperProps={{
           className:
-            'bg-background1 dark:bg-background1Dark text-textColor1 dark:text-textColor1Dark pl-5 w-full',
+            'bg-background1 dark:bg-background1Dark text-textColor1 dark:text-textColor1Dark  w-full',
         }}
       >
         <div className=" h-[100vh] bg-background1 dark:bg-background1Dark w-full h-full  top-0 left-0 grid">
-          <div className=" max-w-maxHeroWid mx-10 2xl:mx-auto my-5  grid grid-flow-row gap-5 mb-auto">
+          <div className=" max-w-maxHeroWid mx-4 sm:mx-10 2xl:mx-auto my-5  grid grid-flow-row md:gap-5 mb-auto">
             {/* close icon start */}
             <div
               className="ml-auto bg-background3 dark:bg-background3Dark  grid p-2 rounded cursor-pointer"
@@ -94,11 +88,11 @@ export default function ShowcaseOverlay({
             {/* close icon end */}
 
             <div className="bg-red500 grid md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10 ">
-              <div className="md:col-span-2 grid gap-10 ">
+              <div className="md:col-span-2 grid gap-5 sm:gap-10 ">
                 <div className="font-bold text-[32px] mb-auto">{item.name}</div>
                 {/* scrolling image canvas start */}
-                <div>
-                  <div className="grid h-max">
+                <div className='grid '>
+                  <div className="grid">
                     <EnhancedSwipeableViews
                       axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                       index={autoScrollImageCanvasIndex}
@@ -106,19 +100,23 @@ export default function ShowcaseOverlay({
                         setAutoScrollImageCanvasIndex(index);
                       }}
                       style={{ transition: '2.15s ease' }}
-                      enableMouseEvents
+                      enableMouseEvents = {true}
                       className="duration-1000 shadow-md"
-                      slideClassName=" transition-all ease-in-out duration-1000"
+                      slideClassName="transition-all ease-in-out duration-1000"
                     >
                       {item.otherImages.map((image) => (
                         <TabPanel
                           value={autoScrollImageCanvasIndex}
                           index={item.otherImages.indexOf(image)}
-                          dir={theme.direction}
-                          className=" "
+                          // dir={theme.direction}
+                          className=""
                           key={item.otherImages.indexOf(image)}
-                        >
-                          <Image src={image} alt="image" />
+                          dir={theme.direction === 'rtl' ? 'x-reverse' : 'ltr' ? 'x' : 'x'}
+
+                        ><div className=''>
+
+                          <Image src={image} alt="image" className='' />
+                        </div>
                         </TabPanel>
                       ))}
                      
@@ -137,7 +135,7 @@ export default function ShowcaseOverlay({
               </div>
               {/* information box start */}
               <div className=" bg-blue500 grid ">
-                <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
+                <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-6 lg:p-8 grid gap-4">
                   {/* description start */}
                   <div className="grid gap-3 ">
                     <div className="font-bold text-[18px]">Description</div>
@@ -265,7 +263,7 @@ export default function ShowcaseOverlay({
               {/* information box end */}
 
             </div>
-            <div className='bg-red-500'>
+            <div className='h-3 sm:h-10'>
             {/* <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FbthpWbwh5ARUNlynm3vcml%2FShuk-Shukta-Blogs-Ui-design%3Fnode-id%3D0%253A1%26t%3DrpTlLxnNRyXJz0CF-1" allowfullscreen></iframe> */}
             </div>
           </div>

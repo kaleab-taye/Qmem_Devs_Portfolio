@@ -77,7 +77,7 @@ export default function Home() {
                   Qmem Developers
                 </div>
               </div>
-              <div className="text-textColor2 dark:text-textColor2Dark opacity-70  text-md  ">
+              <div className="text-textColor2 dark:text-textColor2Dark opacity-70  text-md text-justify ">
                 We are a team of Dedicated, Hardworking and Proficient software
                 engineers from Addis Ababa University with experience of
                 successfully delivering projects and plans to work on
