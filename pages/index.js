@@ -96,12 +96,15 @@ export default function Home() {
             </div>
           </div>
           {/* landing section end */}
+          
           {/* what we do section start */}
           <WhatWeDoSection />
           {/* what we do section end */}
+
           {/* testimonials section start */}
           <TestimonialSection />
           {/* testimonials section end */}
+
           {/* performance overview start */}
           <div className="m-auto grid grid-flow-row gap-8 text-textColor1 dark:text-textColor1Dark my-10">
             <div>

@@ -1,25 +1,13 @@
-import {
-  faArrowRight,
-  faPen,
-  faSearch,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react'
 
-export default function WhatWeDoCard({ title, description, icon, children, state }) {
-  let classN ="";
-
-  if (state ==1){
-    console.log('found')
-    classN = "grid group relative col-start-0"
-  }
-  
+export default function WhatWeDoCard2({title,icon,description,index,children}) {
   return (
     <div className="grid group relative">
       <div className="   grid grid-cols-3 gap-2 my-auto ">
-        <div className="col-start-3 row-start-auto text-accentColor dark:text-accentColorDark grid m-auto grid min-w-[120px]">
+        <div className=" text-accentColor dark:text-accentColorDark grid m-auto grid min-w-[120px]">
           {children}
         </div>
-        <div className="grid m-auto col-span-2 row-start-1 col-start-1 ">
+        <div className="grid m-auto col-span-2">
           <div className="text-lg font-bold ">{title}</div>
           <div className="text-sm text-textColor1 dark:text-textColor1Dark opacity-60">
             {description}
@@ -36,5 +24,5 @@ export default function WhatWeDoCard({ title, description, icon, children, state
         </div>
       </div> */}
     </div>
-  );
+  )
 }

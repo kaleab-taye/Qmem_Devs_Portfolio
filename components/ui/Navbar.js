@@ -30,13 +30,16 @@ export default function Navbar({ page }) {
   ];
 
   return (
-    <div className=" grid grid-flow-col lg:mx-10 mx-2 py-2 lg:py-6 ">
+    <div className=" grid grid-flow-col lg:mx-10 mx-3 py-2 lg:py-6 ">
       {/* logo and name start */}
       <div className=" text-textColor1 dark:text-textColor1Dark mr-auto my-auto text-3xl grid grid-flow-col my-auto">
         <Link href="/">
-          <div className=''>
-
-          <Image className="w-14 rounded-full drop-shadow-xl border-2 border-textColor3 dark:border-textColor3 drop-shadow-xl " src={logoImage} alt="logo" />
+          <div className="">
+            <Image
+              className="w-14 rounded-full drop-shadow-xl border-2 border-textColor3 dark:border-textColor3 drop-shadow-xl "
+              src={logoImage}
+              alt="logo"
+            />
           </div>
         </Link>
         <div
@@ -68,13 +71,18 @@ export default function Navbar({ page }) {
             </div>
           </Link>
         ))}
-        <div className="relative grid my-auto">
-          <div className="font-bold text-[magenta,cyan] z-10 my-auto rounded-xl  py-2 px-3 text-textColor1 dark:text-textColor1Dark ">
-            Hire us
+        {/* hire us start */}
+        <Link href='/contact'>
+          <div className="relative grid my-auto">
+            <div className="font-bold text-[magenta,cyan] z-10 my-auto rounded-xl  py-2 px-3 text-textColor1 dark:text-textColor1Dark ">
+              Hire us
+            </div>
+            <div className="hireAnim1 z-0 shadow-[0px_0px_8px_0.25px_magenta] shadow-magenta absolute rounded-xl bg-gree w-full h-full"></div>
+            <div className="hireAnim2 z-0 shadow-[0px_0px_8px_0.25px_textColor1] dark:shadow-[0px_0px_8px_0.25px_textColor1Dark] shadow-accentColor dark:shadow-accentColorDark absolute rounded-xl bg-gree w-full h-full"></div>
           </div>
-          <div className="hireAnim1 z-0 shadow-[0px_0px_8px_0.25px_magenta] shadow-magenta absolute rounded-xl bg-gree w-full h-full"></div>
-          <div className="hireAnim2 z-0 shadow-[0px_0px_8px_0.25px_textColor1] dark:shadow-[0px_0px_8px_0.25px_textColor1Dark] shadow-accentColor dark:shadow-accentColorDark absolute rounded-xl bg-gree w-full h-full"></div>
-        </div>
+        </Link>
+        {/* <Drawer open={true} anchor='top'>chefche</Drawer> */}
+        {/* hire us end */}
         {/* theme switch start */}
         <div className="my-auto ml-auto">
           <ThemeSwitchIcon />

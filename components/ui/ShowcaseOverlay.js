@@ -92,8 +92,8 @@ export default function ShowcaseOverlay({
             </div>
             {/* close icon end */}
 
-            <div className="grid grid-flow-row md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10 ">
-              <div className="col-span-2 grid gap-10 overflow-scrol ">
+            <div className="bg-green-500 grid grid-flow-row md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10 ">
+              <div className="col-span-2 grid gap-10 ">
                 <div className="font-bold text-[32px] mb-auto">{item.name}</div>
                 {/* scrolling image canvas start */}
                 <div>
@@ -142,8 +142,8 @@ export default function ShowcaseOverlay({
                 <div>{item.blog}</div>{' '}
               </div>
               {/* information box start */}
-              <div className="">
-                <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4 ">
+              <div className=" bg-red-500 w-[100%]">
+                <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
                   {/* description start */}
                   <div className="grid gap-3 overflow-hidden">
                     <div className="font-bold text-[18px]">Description</div>
