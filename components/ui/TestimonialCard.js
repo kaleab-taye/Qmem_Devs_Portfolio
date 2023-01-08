@@ -5,10 +5,10 @@ import logoImage from '../../public/Logo.png';
 
 export default function TestimonialCard({ image, body, by, position }) {
   return (
-    <span className="max-w-[595px] lg:max-w-[695px] m-[40px] md:mx-auto bg-yellow-300 border-2 bg-background3 dark:bg-background3Dark rounded-lg border-background2 dark:border-background2Dark text-textColor1 dark:text-textColor1Dark z-1 ">
+    <span className="max-w-[595px] lg:max-w-[695px] m-[40px] md:mx-auto border-2 bg-background3 dark:bg-background3Dark rounded-lg border-background2 dark:border-background2Dark text-textColor1 dark:text-textColor1Dark z-1 ">
       <span className="absolute mt-[-30px] ml-[-30px] h-[80px] w-[80px]">
         <Image
-          className="rounded-full w-[80px] h-[80px]"
+          className="rounded-full w-[80px] h-[80px] border-2 shadow-md border-background2 dark:border-background2Dark"
           src={logoImage}
           alt="user image"
         />

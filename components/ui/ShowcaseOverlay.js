@@ -30,6 +30,7 @@ import TabPanel from '../TabPanel';
 import testImage from './../../public/axumWgrad.jpg';
 import testImage1 from './../../public/Logo.png';
 import TestimonialCard from './TestimonialCard';
+import CustomPagination from './CustomPagination';
 
 export default function ShowcaseOverlay({
   isOverlayOpen,
@@ -92,12 +93,12 @@ export default function ShowcaseOverlay({
             </div>
             {/* close icon end */}
 
-            <div className="bg-green-500 grid grid-flow-row md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10 ">
-              <div className="col-span-2 grid gap-10 ">
+            <div className="bg-red500 grid md:grid-cols-3 text-textColor1 dark:text-textColor1Dark gap-5 lg:gap-10 ">
+              <div className="md:col-span-2 grid gap-10 ">
                 <div className="font-bold text-[32px] mb-auto">{item.name}</div>
                 {/* scrolling image canvas start */}
                 <div>
-                  <div className="grid">
+                  <div className="grid h-max">
                     <EnhancedSwipeableViews
                       axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                       index={autoScrollImageCanvasIndex}
@@ -120,32 +121,25 @@ export default function ShowcaseOverlay({
                           <Image src={image} alt="image" />
                         </TabPanel>
                       ))}
-                      {/* <TabPanel
-                              value={autoScrollImageCanvasIndex}
-                              index={0}
-                              dir={theme.direction}
-                              className=" "
-                            >
-                              <Image src={testImage1} alt="image" />
-                            </TabPanel>
-                            <TabPanel
-                              value={autoScrollImageCanvasIndex}
-                              index={1}
-                              dir={theme.direction}
-                            >
-                              <Image src={testImage} alt="image" />
-                            </TabPanel> */}
+                     
                     </EnhancedSwipeableViews>
+                    <div className="m-auto">
+                      <CustomPagination
+                        length={item.otherImages.length}
+                        currentIndex={autoScrollImageCanvasIndex}
+                        currentIndexSetter={setAutoScrollImageCanvasIndex}
+                      />
+                    </div>
                   </div>
                 </div>
                 {/* scrolling image canvas end */}
-                <div>{item.blog}</div>{' '}
+                <div className='text-[16px] font-medium text-justify'>{item.blog}</div>{' '}
               </div>
               {/* information box start */}
-              <div className=" bg-red-500 w-[100%]">
+              <div className=" bg-blue500 grid ">
                 <div className="mb-auto border-2 border-background2 dark:border-background2Dark bg-background3 dark:bg-background3Dark rounded-2xl p-8 grid gap-4">
                   {/* description start */}
-                  <div className="grid gap-3 overflow-hidden">
+                  <div className="grid gap-3 ">
                     <div className="font-bold text-[18px]">Description</div>
                     <div className="grid gap-2">
                       {/* customer type start */}
@@ -193,33 +187,38 @@ export default function ShowcaseOverlay({
                   <div className="text-md font-medium my-auto opacity-90">
                     {item.description}
                   </div>
-                  <div className="grid gap-3 overflow-hidden">
+                  {/* what we did start */}
+                  <div className="grid gap-3 ">
                     <div className="font-bold text-[18px]">We Did</div>
                     <div className="flex gap-2 justify-start flex-wrap">
                       {item.category.map((category) => (
                         <div
                           key={item.category.indexOf(category)}
-                          className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark "
+                          className="text-sm p-1 text-textColor2 dark:text-textColor2Dark rounded bg-background2 dark:bg-background2Dark "
                         >
                           {category}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="grid gap-3 overflow-hidden">
+                  {/* what we did end */}
+
+                  {/* technology start */}
+                  <div className="grid gap-3 ">
                     <div className="font-bold text-[18px]">Technology</div>
                     <div className="flex gap-2 justify-start flex-wrap">
                       {item.technologies.map((tech) => (
                         <div
                           key={item.technologies.indexOf(tech)}
-                          className="text-sm p-1 text-textColor3 dark:text-textColor3Dark rounded bg-background2 dark:bg-background2Dark "
+                          className="text-sm p-1 text-textColor2 dark:text-textColor2Dark rounded bg-background2 dark:bg-background2Dark "
                         >
                           {tech}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="grid gap-3 overflow-hidden">
+                  {/* technology end */}
+                  <div className="grid gap-3 ">
                     <div className="font-bold text-[18px]">Share</div>
                     <div className="grid mr-auto gap-2 grid-cols-auto grid-rows-auto grid-flow-col overflow- ">
                       <a
@@ -227,7 +226,7 @@ export default function ShowcaseOverlay({
                         href="https://facebook.com"
                         rel="noopener noreferrer"
                       >
-                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
+                        <div className="  text-textColor2 dark:textColor2Dark hover:text-textColor1 dark:hover:text-textColor1Dark m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faSquareFacebook}
@@ -239,7 +238,7 @@ export default function ShowcaseOverlay({
                         href="https://linkedin.com"
                         rel="noopener noreferrer"
                       >
-                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
+                        <div className="  text-textColor2 dark:textColor2Dark hover:text-textColor1 dark:hover:text-textColor1Dark m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faLinkedin}
@@ -251,7 +250,7 @@ export default function ShowcaseOverlay({
                         href="https://instagram.com"
                         rel="noopener noreferrer"
                       >
-                        <div className=" text-textColor3 dark:text-textColor3Dark   m-auto grid">
+                        <div className="  text-textColor2 dark:textColor2Dark hover:text-textColor1 dark:hover:text-textColor1Dark m-auto grid">
                           <FontAwesomeIcon
                             className="m-auto w-[26px] h-[26px]"
                             icon={faInstagram}
@@ -263,6 +262,11 @@ export default function ShowcaseOverlay({
                   {/* description box end */}
                 </div>
               </div>
+              {/* information box end */}
+
+            </div>
+            <div className='bg-red-500'>
+            {/* <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FbthpWbwh5ARUNlynm3vcml%2FShuk-Shukta-Blogs-Ui-design%3Fnode-id%3D0%253A1%26t%3DrpTlLxnNRyXJz0CF-1" allowfullscreen></iframe> */}
             </div>
           </div>
         </div>
