@@ -21,7 +21,7 @@ export default function WhatWeDoCard({ title, description, icon, children, state
         </div>
         <div className="grid m-auto col-span-2 row-start-1 col-start-1 ">
           <div className="text-lg font-bold ">{title}</div>
-          <div className="text-sm text-textColor1 dark:text-textColor1Dark opacity-60 text-justify">
+          <div className="text-sm text-textColor1 dark:text-textColor1Dark opacity-60">
             {description}
           </div>
         </div>

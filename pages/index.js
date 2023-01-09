@@ -29,9 +29,12 @@ import FooterSection from '../components/ui/sections/FooterSection';
 import OverviewCard from '../components/ui/OverviewCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { faAndroid } from '@fortawesome/free-brands-svg-icons';
+import { faAndroid, faGithub, faInstagram, faLinkedin, faSquareFacebook, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import WhatWeDoSection from '../components/ui/sections/WhatWeDoSection';
 import { Quicksand } from '@next/font/google';
+
+import kaleab from './../public/our-team/kaleab.JPG';
+import OurTeamSection from '../components/ui/sections/OurTeam';
 
 const quicksand = Quicksand({subsets : ['latin']});
 export default function Home() {
@@ -77,7 +80,7 @@ export default function Home() {
                   Qmem Developers
                 </div>
               </div>
-              <div className="text-textColor2 dark:text-textColor2Dark opacity-70  text-md text-justify ">
+              <div className="text-textColor2 dark:text-textColor2Dark opacity-70  text-md  ">
                 We are a team of Dedicated, Hardworking and Proficient software
                 engineers from Addis Ababa University with experience of
                 successfully delivering projects and plans to work on
@@ -138,7 +141,11 @@ export default function Home() {
             </div>
           </div>
           {/* performance overview end */}
-        </div>
+
+          {/* Our Team start */}
+          <OurTeamSection/>
+          {/* Our Team end */}
+          </div>
       </div>
     </BodyLayout>
   );
