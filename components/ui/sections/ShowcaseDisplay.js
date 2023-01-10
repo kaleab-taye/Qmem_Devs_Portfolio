@@ -23,7 +23,7 @@ export default function ShowcaseDisplay({ category,categoryEnum }) {
     {
       image: shuk_shukta_001,
       name: 'Shuk-Shukta-Blogs',
-      meta: 'a blogging platform',
+      meta: 'Blogging platform',
       description: 'User friendly, SEO optimized and highly performant blogging site.',
       category: [categoryEnum.webapp,categoryEnum.ui_ux_design],
       key: '123456789',
@@ -32,7 +32,7 @@ export default function ShowcaseDisplay({ category,categoryEnum }) {
       customer: 'Open Source Contribution',
       date : 'September 5 2022',
       link : 'https://shuk-shukta-blogs.vercel.app/',
-      blog : 'shuk-shukta-blogs is a free blogging site where anyone can blog posts and get interaction from everyone reading it. \n We did this project when we were experimenting with websites search engine optimization and technologies that are best suited for platforms such as that.'
+      blog : 'Shuk-Shukta-blogs is a free blogging site where anyone can blog posts and get interaction from everyone reading it. \n We did this project when we were experimenting with websites search engine optimization and technologies that are best suited for platforms such as that.'
       
     },{
       image: angels_touch_001,

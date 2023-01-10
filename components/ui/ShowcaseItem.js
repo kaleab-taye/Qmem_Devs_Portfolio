@@ -10,7 +10,7 @@ export default function ShowcaseItem({ key, item }) {
   const [isOverlayOpen, setOverlayOpenState] = useState(false);
   return (
     <Placeholder isLoading={imageLoading}>
-      <div className="relative grid grid-flow-col rounded-lg overflow-hidden shadow-lg">
+      <div className="cursor-pointer relative grid grid-flow-col rounded-lg overflow-hidden shadow-lg">
         <Image
           className="z-20  hover:z-0 transition-all hover:z-0 duration-700 object-cover hover:scale-125   "
           src={item.image}

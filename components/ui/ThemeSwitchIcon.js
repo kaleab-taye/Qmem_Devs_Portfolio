@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
+import {MdOutlineLightMode} from 'react-icons/md'
+import IconStyler from './IconStyler';
 
 export default function ThemeSwitchIcon() {
   const [themeDesc, setThemeDesc] = useState('');
@@ -62,7 +64,10 @@ export default function ThemeSwitchIcon() {
           role="button"
           // onClick={() => setTheme('light')}
         >
-          <FontAwesomeIcon className="w-5 h-5" icon={faSun} />
+          <IconStyler value={{ className:'my-auto h-6 w-6'}}>
+          <MdOutlineLightMode/>
+          </IconStyler>
+          {/* <FontAwesomeIcon className="w-5 h-5" icon={faSun} /> */}
         </div>
       );
     } else {

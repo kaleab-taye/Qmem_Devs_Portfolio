@@ -9,23 +9,23 @@ export default function OurTeamSection({image,github,linkedin,instagram}) {
   
     const team= [
         {
-        name : 'kaleab taye',
-        position:'Frontend Developer',
+        name : 'Kaleab Taye',
+        position:'Co-Founder',
         image : kaleab,
         github : 'https://github.com/kaleab-taye',
         instagram : 'https://instagram.com/_kaleab_taye',
         linkedin: 'https://www.linkedin.com/in/kaleab-taye/'
     },{
-        name : 'beka dessalegn',
-        position:'Frontend Developer',
+        name : 'Beka Dessalegn',
+        position:'Co-Founder',
 
         image : kaleab,
         github : 'https://github.com/kaleab-taye',
         instagram : 'https://instagram.com/_kaleab_taye',
         linkedin: 'https://www.linkedin.com/in/kaleab-taye/'
     },{
-        name : 'estifanos neway',
-        position:'Frontend Developer',
+        name : 'Estifanos Neway',
+        position:'Co-Founder',
 
         image : kaleab,
         github : 'https://github.com/kaleab-taye',
@@ -44,10 +44,10 @@ export default function OurTeamSection({image,github,linkedin,instagram}) {
                     team.map((member)=>(<div key={member.name} className="my-auto gap-4 h-[100%] z-10 transition-all  text-center hover:-translate-y-2 ease-in-out duration-500 my-auto grid md:grid-flow-col border-2 rounded-lg bg-background3 dark:bg-background3Dark  py-[20px] px-[10px] border-background2 dark:border-background2Dark mx-auto">
                   <Image className='rounded-sm my-auto' width={200} src={member.image} alt="kaleab's picture"/>
                   <div className='gap-1 grid my-auto'>
-                    <div className='font-bold text-sm text-textColor1 dark:text-textColor1Dark'>{member.position}</div>
+                    <div className='font-bold text-xs sm:text-sm text-textColor1 dark:text-textColor1Dark'>{member.position}</div>
                     <div className='grid gap-2 '>
                         <div className='text-textColor3 dark:textColor3Dark'>{member.name}</div>
-                        <div className="grid mx-auto gap-6 grid-cols-auto grid-rows-auto grid-flow-col overflow- ">
+                        <div className="text-xs grid mx-auto gap-3 md:gap-6 grid-cols-auto grid-rows-auto grid-flow-col overflow- ">
                         <a
                             target="_blank"
                             href={member.github}
