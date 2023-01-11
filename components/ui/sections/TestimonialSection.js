@@ -22,6 +22,8 @@ import CustomizedPagination from '../CustomizedPagination';
 import PartialUnderline from '../PartialUnderline';
 import TestimonialCard from '../TestimonialCard';
 import CustomPagination from '../CustomPagination';
+import Image from 'next/image';
+import testimonialImage from './../../../public/Testimonials-rafiki.svg'
 
 const EnhancedSwipeableViews = autoPlay(bindKeyboard(SwipeableViews));
 export default function TestimonialSection() {
@@ -32,8 +34,16 @@ useEffect(()=>{
 },[theme.direction])
   return (
     <div className="grid grid-flow-row gap-3 sm:gap-8 ">
-      <div>
+      <div className='grid grid-flow-col gap-5 mr-auto'>
         <PartialUnderline text="Testimonials" />
+        <div className=" w-fit grid m-auto h-fit rounded-md border border-background2 dark:border-background2Dark border-2  ">
+                  <Image
+                    priority
+                    className="my-auto object-cover w-28 overflow-visible"
+                    alt="Hero image"
+                    src={testimonialImage}
+                  />
+                </div>
       </div>
       <div>
         <EnhancedSwipeableViews

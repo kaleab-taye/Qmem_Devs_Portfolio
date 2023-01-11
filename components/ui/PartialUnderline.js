@@ -11,5 +11,5 @@ export default function PartialUnderline({ text, className }) {
   );
 }
 PartialUnderline.defaultProps={
-  className :'mr-auto text-xl font-extrabold text-textColor1 dark:text-textColor1Dark'
+  className :'my-auto mr-auto text-xl font-extrabold text-textColor1 dark:text-textColor1Dark'
 }

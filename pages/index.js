@@ -4,6 +4,8 @@ import backendPng from '../public/icons/backend.png';
 import BodyLayout from '../components/ui/BodyLayout';
 import styles from '../styles/Home.module.css';
 import heroImage from '../public/Programmer-amico.svg';
+import heroImage1 from '../public/landing/001-ideation.svg';
+import testimonialImage from '../public/Testimonials-rafiki.svg';
 import Button from '../components/ui/Button';
 import WhatWeDoCard from '../components/ui/WhatWeDoCard';
 import PartialUnderline from '../components/ui/PartialUnderline';
@@ -35,6 +37,7 @@ import { Quicksand } from '@next/font/google';
 
 import kaleab from './../public/our-team/kaleab.JPG';
 import OurTeamSection from '../components/ui/sections/OurTeam';
+import HeroImageScrollSection from '../components/ui/sections/HeroImageScrollSection';
 
 const quicksand = Quicksand({subsets : ['latin']});
 export default function Home() {
@@ -51,13 +54,9 @@ export default function Home() {
                 <div className="s2 rounded-full shadow-[3px_-3px_10px_2px_textColor1] dark:shadow-[3px_-3px_10px_2px_textColor1Dark] shadow-accentColor dark:shadow-accentColorDark absolute w-full h-fill top-0 bg-red-5040 -inset-0.5"></div>
                 {/* changing shadow design end */}
 
-                <div className=" w-fit grid m-auto h-fit rounded-full border border-background2 dark:border-background2Dark border-8  bg-gray-500">
-                  <Image
-                    priority
-                    className="relative m-auto object-cover w-96 p-5 overflow-visible"
-                    alt="Hero image"
-                    src={heroImage}
-                  />
+                <div className=" w-fit grid m-auto h-fit rounded-full border border-background2 dark:border-background2Dark border-8  dark:bg-gray-500 bg-gray-400">
+               <HeroImageScrollSection/>
+
                 </div>
               </div>
             </div>
@@ -103,15 +102,11 @@ export default function Home() {
           {/* what we do section start */}
           <WhatWeDoSection />
           {/* what we do section end */}
-
-          {/* testimonials section start */}
-          <TestimonialSection />
-          {/* testimonials section end */}
-
-          {/* performance overview start */}
+ {/* performance overview start */}
           <div className="m-auto grid grid-flow-row gap-8 text-textColor1 dark:text-textColor1Dark my-10">
             <div>
               <PartialUnderline text="Overview" />
+              
             </div>
             <div className=" grid grid-flow-row sm:grid-flow-col gap-7">
               <OverviewCard
@@ -142,6 +137,11 @@ export default function Home() {
           </div>
           {/* performance overview end */}
 
+          {/* testimonials section start */}
+          <TestimonialSection />
+          {/* testimonials section end */}
+
+         
           {/* Our Team start */}
           <OurTeamSection/>
           {/* Our Team end */}

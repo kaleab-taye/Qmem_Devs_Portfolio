@@ -3,7 +3,8 @@ import PartialUnderline from '../PartialUnderline'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import kaleab from './../../../public/our-team/kaleab.JPG';
+import kaleab from './../../../public/our-team/kaleab.PNG';
+import teamImage from './../../../public/Teamwork-rafiki.svg';
 
 export default function OurTeamSection({image,github,linkedin,instagram}) {
   
@@ -36,13 +37,23 @@ export default function OurTeamSection({image,github,linkedin,instagram}) {
 
     return (
     <div className="m-auto grid grid-flow-row gap-8 text-textColor1 dark:text-textColor1Dark my-10">
-            <div>
+            <div className='grid grid-flow-col mr-auto gap-5'>
               <PartialUnderline text="Our Team" />
+              <div className=" w-fit grid m-auto h-fit rounded-md border border-background2 dark:border-background2Dark border-2  ">
+                  <Image
+                    priority
+                    className="my-auto object-cover w-28 overflow-visible"
+                    alt="Hero image"
+                    src={teamImage}
+                  />
+                </div>
             </div>
-            <div className='grid grid-flow-col gap-2 sm:gap-8 my-auto '>
+            <div className='grid grid-flow-col gap-2 sm:gap-8 lg:gap-14 my-auto'>
                 {
-                    team.map((member)=>(<div key={member.name} className="my-auto gap-4 h-[100%] z-10 transition-all  text-center hover:-translate-y-2 ease-in-out duration-500 my-auto grid md:grid-flow-col border-2 rounded-lg bg-background3 dark:bg-background3Dark  py-[20px] px-[10px] border-background2 dark:border-background2Dark mx-auto">
-                  <Image className='rounded-sm my-auto' width={200} src={member.image} alt="kaleab's picture"/>
+                    team.map((member)=>(<div key={member.name} className=" max-w-[340px] my-auto gap-4 h-[100%] z-10 transition-all  text-center hover:-translate-y-2 ease-in-out duration-500 my-auto grid md:grid-flow-col border-2 rounded-lg bg-background3 dark:bg-background3Dark  py-[20px] px-[10px] border-background2 dark:border-background2Dark mx-auto">
+                  <div className=''>
+                  <Image className='rounded-full my-auto w-30' src={member.image} alt="kaleab's picture"/>
+                    </div>
                   <div className='gap-1 grid my-auto'>
                     <div className='font-bold text-xs sm:text-sm text-textColor1 dark:text-textColor1Dark'>{member.position}</div>
                     <div className='grid gap-2 '>
