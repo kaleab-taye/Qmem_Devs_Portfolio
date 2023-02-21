@@ -23,17 +23,17 @@ export default function OurTeamSection({ image, github, linkedin, instagram }) {
             position: 'Co-Founder',
 
             image: beka,
-            github: 'https://github.com/kaleab-taye',
-            instagram: 'https://instagram.com/_kaleab_taye',
-            linkedin: 'https://www.linkedin.com/in/kaleab-taye/'
+            github: 'https://github.com/bekaDessalegn',
+            instagram: 'https://www.instagram.com/__b.u.z.z/',
+            linkedin: 'https://www.linkedin.com/in/beka-dessalegn-090831145/'
         }, {
             name: 'Estifanos Neway',
             position: 'Co-Founder',
 
             image: estifo,
-            github: 'https://github.com/kaleab-taye',
-            instagram: 'https://instagram.com/_kaleab_taye',
-            linkedin: 'https://www.linkedin.com/in/kaleab-taye/'
+            github: 'https://github.com/Estifanos-Neway',
+            instagram: 'https://www.instagram.com/estifanos_neway/',
+            linkedin: 'https://www.linkedin.com/in/estifanos-neway/'
         }
     ]
 
