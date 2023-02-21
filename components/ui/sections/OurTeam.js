@@ -3,7 +3,7 @@ import PartialUnderline from '../PartialUnderline'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import kaleab from './../../../public/our-team/kaleab.PNG';
+import kaleab from './../../../public/our-team/kaleab.JPG';
 import beka from './../../../public/our-team/beka.jpg';
 import estifo from './../../../public/our-team/estifo.jpg';
 import teamImage from './../../../public/Teamwork-rafiki.svg';
